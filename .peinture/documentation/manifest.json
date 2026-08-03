@@ -1,0 +1,11 @@
+{
+  "version": "1.0.0",
+  "children": [
+    {
+      "id": "getting-started",
+      "title": "Getting Started",
+      "type": "markdown",
+      "source": "./content/getting-started.md"
+    }
+  ]
+}
