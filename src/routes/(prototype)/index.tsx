@@ -167,7 +167,7 @@ function HomePage() {
           <div className="max-w-xl">
             <span className="bg-leaf/30 border-olive/40 text-olive-deep inline-flex items-center gap-2 rounded-full border px-3 py-1 text-xs font-semibold tracking-wide uppercase">
               <span className="bg-orange-zest h-2 w-2 rounded-full" aria-hidden />
-              Atelier chocolaté · fait main · Bio · Éthique
+              Atelier chocolaté · Bio · Éthique · fait main
             </span>
             <h1 className="font-display text-forest mt-6 text-5xl leading-[1.05] sm:text-6xl lg:text-7xl">
               De petits chocolats,
