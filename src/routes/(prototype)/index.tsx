@@ -126,6 +126,7 @@ function Section({
 }
 
 function HomePage() {
+  const [menuOpen, setMenuOpen] = useState(false);
   return (
     <div className="bg-background text-foreground min-h-dvh">
       {/* Header */}
@@ -154,10 +155,54 @@ function HomePage() {
           </nav>
           <a
             href="#contact"
-            className="bg-forest hover:bg-olive-deep rounded-full px-5 py-2 text-sm font-semibold text-cream transition-colors"
+            className="bg-forest hover:bg-olive-deep hidden rounded-full px-5 py-2 text-sm font-semibold text-cream transition-colors md:inline-flex"
           >
             Commander
           </a>
+          <button
+            type="button"
+            aria-label="Ouvrir le menu"
+            aria-expanded={menuOpen}
+            onClick={() => setMenuOpen((v) => !v)}
+            className="border-cocoa/15 text-forest hover:bg-forest/5 inline-flex h-11 w-11 items-center justify-center rounded-full border transition-colors md:hidden"
+          >
+            <span className="relative block h-4 w-5" aria-hidden>
+              <span
+                className={`bg-forest absolute left-0 block h-0.5 w-5 rounded-full transition-all duration-300 ${menuOpen ? "top-1.5 rotate-45" : "top-0"}`}
+              />
+              <span
+                className={`bg-forest absolute top-1.5 left-0 block h-0.5 w-5 rounded-full transition-all duration-300 ${menuOpen ? "opacity-0" : "opacity-100"}`}
+              />
+              <span
+                className={`bg-forest absolute left-0 block h-0.5 w-5 rounded-full transition-all duration-300 ${menuOpen ? "top-1.5 -rotate-45" : "top-3"}`}
+              />
+            </span>
+          </button>
+        </div>
+
+        {/* Mobile menu */}
+        <div
+          className={`overflow-hidden border-cocoa/10 md:hidden ${menuOpen ? "max-h-96 border-t" : "max-h-0"} transition-all duration-300 ease-out`}
+        >
+          <nav className="mx-auto flex w-full max-w-6xl flex-col gap-1 px-6 py-4">
+            {NAV.map((n) => (
+              <a
+                key={n.href}
+                href={n.href}
+                onClick={() => setMenuOpen(false)}
+                className="text-cocoa/80 hover:bg-forest/5 hover:text-forest rounded-2xl px-4 py-3 text-base font-medium transition-colors"
+              >
+                {n.label}
+              </a>
+            ))}
+            <a
+              href="#contact"
+              onClick={() => setMenuOpen(false)}
+              className="bg-forest hover:bg-olive-deep mt-2 rounded-full px-5 py-3 text-center text-sm font-semibold text-cream transition-colors"
+            >
+              Commander
+            </a>
+          </nav>
         </div>
       </header>
 
