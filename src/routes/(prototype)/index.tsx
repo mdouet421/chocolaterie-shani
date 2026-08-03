@@ -139,7 +139,7 @@ function HomePage() {
       />
 
       {/* Header */}
-      <header className="border-cocoa/10 bg-white/90 sticky top-0 z-50 border-b backdrop-blur-md">
+      <header className="border-cocoa/10 bg-white/70 sticky top-0 z-50 border-b backdrop-blur-xl">
         <div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-4 px-6 py-3 sm:px-8">
           <a href="#top" className="flex items-center gap-3">
             <img
