@@ -68,10 +68,10 @@ const SOURCING = [
     title: "Les oranges bio",
     from: "au marché",
     body: "Cueillies chez le maraîcher du coin, confites patiemment avant leur bain de chocolat.",
-    card: "bg-forest text-cream",
-    dot: "bg-blush",
-    fromColor: "text-blush",
-    bodyColor: "text-cream/80",
+    card: "bg-sage/40 text-cocoa-deep",
+    dot: "bg-forest",
+    fromColor: "text-forest",
+    bodyColor: "text-cocoa/80",
   },
 ];
 
