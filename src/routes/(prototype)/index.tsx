@@ -49,7 +49,7 @@ const SOURCING = [
     title: "Le chocolat",
     from: "Kaoka",
     body: "Un cacao cultivé dans le respect de l'environnement et des producteurs, tracé jusqu'à la fève.",
-    card: "bg-cocoa text-cream",
+    card: "bg-chocolate text-cream",
     dot: "bg-honey",
     fromColor: "text-honey",
     bodyColor: "text-cream/80",
