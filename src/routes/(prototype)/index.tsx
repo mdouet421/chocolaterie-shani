@@ -224,7 +224,7 @@ function HomePage() {
         </Section>
 
         {/* Values mentions */}
-        <div className="border-cocoa/10 bg-cream-deep border-y">
+        <div className="border-cocoa/10 bg-blush/50 border-y">
           <div className="mx-auto flex w-full max-w-6xl flex-wrap items-center justify-center gap-x-5 gap-y-2 px-6 py-5 sm:px-8">
             {VALUES.map((v, i) => (
               <span
