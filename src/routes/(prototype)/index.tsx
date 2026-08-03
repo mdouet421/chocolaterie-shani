@@ -228,9 +228,10 @@ function HomePage() {
       <div id="top" className="relative overflow-hidden">
         <Section className="relative grid items-center gap-12 pt-16 pb-20 lg:grid-cols-[1.1fr_0.9fr] lg:pt-24 lg:pb-28">
           <div className="max-w-xl">
-            <span className="bg-leaf/30 border-olive/40 text-olive-deep inline-flex items-center gap-2 rounded-full border px-3 py-1 text-xs font-semibold tracking-wide uppercase">
-              <span className="bg-orange-zest h-2 w-2 rounded-full" aria-hidden />
-              Atelier chocolaté · Bio · Éthique · fait main
+            <span className="bg-leaf/30 border-olive/40 text-olive-deep inline-flex flex-wrap items-center gap-x-1.5 gap-y-0.5 rounded-full border px-3 py-1 text-xs font-semibold tracking-wide uppercase">
+              <span className="bg-orange-zest h-2 w-2 shrink-0 rounded-full" aria-hidden />
+              <span className="whitespace-nowrap">Atelier chocolaté</span>{" "}
+              <span className="whitespace-nowrap">· Bio · Éthique · fait main</span>
             </span>
             <h1 className="font-display text-forest mt-6 text-5xl leading-[1.05] sm:text-6xl lg:text-7xl">
               De petits chocolats,
