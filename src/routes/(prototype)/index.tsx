@@ -420,7 +420,7 @@ function HomePage() {
           <img
             src="/logo-shani.jpeg"
             alt="Les Pépites de Shani"
-            className="mx-auto h-24 w-24 rounded-full object-cover ring-[14px] ring-white"
+            className="mx-auto h-40 w-40 rounded-full object-cover ring-[14px] ring-white"
           />
           <h2 className="font-display text-forest mt-8 text-4xl leading-tight sm:text-5xl">
             J'espère que mes chocolats
