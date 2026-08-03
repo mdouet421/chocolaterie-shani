@@ -12,7 +12,7 @@ const NAV = [
   { label: "Contact", href: "#contact" },
 ];
 
-const VALUES = ["Bio", "Éthique", "Fait main", "Édition de Noël", "Tempéré maison"];
+const VALUES = ["Bio", "Éthique", "Fait main", "Tempéré maison"];
 
 const CREATIONS = [
   {
@@ -203,6 +203,19 @@ function HomePage() {
                 Rencontrer Shani
               </a>
             </div>
+            <div className="mt-8 flex flex-wrap items-center gap-x-5 gap-y-2">
+              {VALUES.map((v, i) => (
+                <span
+                  key={v}
+                  className="text-cocoa/70 flex items-center gap-5 text-sm font-semibold tracking-wide uppercase"
+                >
+                  {i > 0 && (
+                    <span className="bg-leaf h-1.5 w-1.5 rounded-full" aria-hidden />
+                  )}
+                  {v}
+                </span>
+              ))}
+            </div>
           </div>
 
           <div className="relative mx-auto w-full max-w-md">
@@ -222,23 +235,6 @@ function HomePage() {
             </div>
           </div>
         </Section>
-
-        {/* Values mentions */}
-        <div className="border-cocoa/10 bg-blush/50 border-y">
-          <div className="mx-auto flex w-full max-w-6xl flex-wrap items-center justify-center gap-x-5 gap-y-2 px-6 py-5 sm:px-8">
-            {VALUES.map((v, i) => (
-              <span
-                key={v}
-                className="text-cocoa/70 flex items-center gap-5 text-sm font-semibold tracking-wide uppercase"
-              >
-                {i > 0 && (
-                  <span className="bg-leaf h-1.5 w-1.5 rounded-full" aria-hidden />
-                )}
-                {v}
-              </span>
-            ))}
-          </div>
-        </div>
       </div>
 
       {/* Story */}
