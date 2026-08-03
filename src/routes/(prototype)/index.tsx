@@ -57,7 +57,7 @@ const SOURCING = [
   },
   {
     title: "Amandes & noisettes",
-    from: "petits producteurs",
+    from: "La Fourche",
     body: "Choisies avec soin auprès de filières bio. La sélection s'affine au fil des rencontres.",
     card: "bg-honey/30 text-cocoa-deep",
     dot: "bg-orange-zest",
@@ -66,7 +66,7 @@ const SOURCING = [
   },
   {
     title: "Les oranges bio",
-    from: "au marché",
+    from: "Au marché",
     body: "Cueillies chez le maraîcher du coin, confites patiemment avant leur bain de chocolat.",
     card: "bg-sage/40 text-cocoa-deep",
     dot: "bg-strawberry",
