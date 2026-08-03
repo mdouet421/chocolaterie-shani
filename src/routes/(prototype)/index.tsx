@@ -180,9 +180,18 @@ function HomePage() {
               </span>
             </button>
 
+            {/* Click-outside overlay */}
+            <button
+              type="button"
+              aria-hidden
+              tabIndex={-1}
+              onClick={() => setMenuOpen(false)}
+              className={`fixed inset-0 z-0 cursor-default ${menuOpen ? "block" : "hidden"}`}
+            />
+
             {/* Floating menu */}
             <div
-              className={`border-cocoa/10 bg-white/95 absolute -right-6 top-full mt-3 w-60 origin-top-right rounded-3xl border p-3 shadow-[0_30px_60px_-25px_rgba(60,40,20,0.4)] backdrop-blur-xl transition-all duration-300 ease-out sm:-right-8 ${menuOpen ? "pointer-events-auto scale-100 opacity-100" : "pointer-events-none scale-95 opacity-0"}`}
+              className={`border-cocoa/10 bg-white/95 absolute -right-6 top-full z-10 mt-3 w-60 origin-top-right rounded-l-3xl border border-r-0 p-3 shadow-[0_30px_60px_-25px_rgba(60,40,20,0.4)] backdrop-blur-xl transition-all duration-300 ease-out sm:-right-8 ${menuOpen ? "pointer-events-auto scale-100 opacity-100" : "pointer-events-none scale-95 opacity-0"}`}
             >
               <nav className="flex flex-col gap-1">
                 {NAV.map((n) => (
