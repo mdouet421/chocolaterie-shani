@@ -159,50 +159,52 @@ function HomePage() {
           >
             Commander
           </a>
-          <button
-            type="button"
-            aria-label="Ouvrir le menu"
-            aria-expanded={menuOpen}
-            onClick={() => setMenuOpen((v) => !v)}
-            className="border-cocoa/15 text-forest hover:bg-forest/5 inline-flex h-11 w-11 items-center justify-center rounded-full border transition-colors md:hidden"
-          >
-            <span className="relative block h-4 w-5" aria-hidden>
-              <span
-                className={`bg-forest absolute left-0 block h-0.5 w-5 rounded-full transition-all duration-300 ${menuOpen ? "top-1.5 rotate-45" : "top-0"}`}
-              />
-              <span
-                className={`bg-forest absolute top-1.5 left-0 block h-0.5 w-5 rounded-full transition-all duration-300 ${menuOpen ? "opacity-0" : "opacity-100"}`}
-              />
-              <span
-                className={`bg-forest absolute left-0 block h-0.5 w-5 rounded-full transition-all duration-300 ${menuOpen ? "top-1.5 -rotate-45" : "top-3"}`}
-              />
-            </span>
-          </button>
-        </div>
-
-        {/* Mobile menu */}
-        <div
-          className={`overflow-hidden border-cocoa/10 md:hidden ${menuOpen ? "max-h-96 border-t" : "max-h-0"} transition-all duration-300 ease-out`}
-        >
-          <nav className="mx-auto flex w-full max-w-6xl flex-col gap-1 px-6 py-4">
-            {NAV.map((n) => (
-              <a
-                key={n.href}
-                href={n.href}
-                onClick={() => setMenuOpen(false)}
-                className="text-cocoa/80 hover:bg-forest/5 hover:text-forest rounded-2xl px-4 py-3 text-base font-medium transition-colors"
-              >
-                {n.label}
-              </a>
-            ))}
-            <a
-              href="#contact"
-              onClick={() => setMenuOpen(false)}
-              className="bg-forest hover:bg-olive-deep mt-2 rounded-full px-5 py-3 text-center text-sm font-semibold text-cream transition-colors"
+          <div className="relative md:hidden">
+            <button
+              type="button"
+              aria-label="Ouvrir le menu"
+              aria-expanded={menuOpen}
+              onClick={() => setMenuOpen((v) => !v)}
+              className="border-cocoa/15 text-forest hover:bg-forest/5 relative z-10 inline-flex h-11 w-11 items-center justify-center rounded-full border transition-colors"
             >
-              Commander
-            </a>
-          </nav>
+              <span className="relative block h-4 w-5" aria-hidden>
+                <span
+                  className={`bg-forest absolute left-0 block h-0.5 w-5 rounded-full transition-all duration-300 ${menuOpen ? "top-1.5 rotate-45" : "top-0"}`}
+                />
+                <span
+                  className={`bg-forest absolute top-1.5 left-0 block h-0.5 w-5 rounded-full transition-all duration-300 ${menuOpen ? "opacity-0" : "opacity-100"}`}
+                />
+                <span
+                  className={`bg-forest absolute left-0 block h-0.5 w-5 rounded-full transition-all duration-300 ${menuOpen ? "top-1.5 -rotate-45" : "top-3"}`}
+                />
+              </span>
+            </button>
+
+            {/* Floating menu */}
+            <div
+              className={`border-cocoa/10 bg-white/80 absolute right-0 top-full mt-3 w-60 origin-top-right rounded-3xl border p-3 shadow-[0_30px_60px_-25px_rgba(60,40,20,0.4)] backdrop-blur-xl transition-all duration-300 ease-out ${menuOpen ? "pointer-events-auto scale-100 opacity-100" : "pointer-events-none scale-95 opacity-0"}`}
+            >
+              <nav className="flex flex-col gap-1">
+                {NAV.map((n) => (
+                  <a
+                    key={n.href}
+                    href={n.href}
+                    onClick={() => setMenuOpen(false)}
+                    className="text-cocoa/80 hover:bg-forest/5 hover:text-forest rounded-2xl px-4 py-2.5 text-base font-medium transition-colors"
+                  >
+                    {n.label}
+                  </a>
+                ))}
+                <a
+                  href="#contact"
+                  onClick={() => setMenuOpen(false)}
+                  className="bg-forest hover:bg-olive-deep mt-2 rounded-full px-5 py-2.5 text-center text-sm font-semibold text-cream transition-colors"
+                >
+                  Commander
+                </a>
+              </nav>
+            </div>
+          </div>
         </div>
       </header>
 
