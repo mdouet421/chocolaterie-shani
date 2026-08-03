@@ -391,8 +391,8 @@ function HomePage() {
               <span className="text-orange-zest">trois recettes</span>.
             </h2>
             <p className="text-cocoa/75 mt-4 text-lg">
-              Juste trois, mais faites avec attention. Chaque bouchée est
-              trempée et tempérée à la main.
+              Juste trois, mais réfléchies et préparées avec amour et passion.
+              Chaque bouchée est trempée et tempérée à la main.
             </p>
           </div>
 
