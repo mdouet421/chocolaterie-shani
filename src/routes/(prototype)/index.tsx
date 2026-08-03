@@ -12,8 +12,6 @@ const NAV = [
   { label: "Contact", href: "#contact" },
 ];
 
-const VALUES = ["Bio", "Éthique", "Fait main", "Tempéré maison"];
-
 const CREATIONS = [
   {
     name: "Amandettes",
@@ -169,7 +167,7 @@ function HomePage() {
           <div className="max-w-xl">
             <span className="bg-leaf/30 border-olive/40 text-olive-deep inline-flex items-center gap-2 rounded-full border px-3 py-1 text-xs font-semibold tracking-wide uppercase">
               <span className="bg-orange-zest h-2 w-2 rounded-full" aria-hidden />
-              Atelier chocolaté · fait à la main
+              Atelier chocolaté · fait main · Bio · Éthique
             </span>
             <h1 className="font-display text-forest mt-6 text-5xl leading-[1.05] sm:text-6xl lg:text-7xl">
               De petits chocolats,
@@ -202,19 +200,6 @@ function HomePage() {
               >
                 Rencontrer Shani
               </a>
-            </div>
-            <div className="mt-8 flex flex-wrap items-center gap-x-5 gap-y-2">
-              {VALUES.map((v, i) => (
-                <span
-                  key={v}
-                  className="text-cocoa/70 flex items-center gap-5 text-sm font-semibold tracking-wide uppercase"
-                >
-                  {i > 0 && (
-                    <span className="bg-leaf h-1.5 w-1.5 rounded-full" aria-hidden />
-                  )}
-                  {v}
-                </span>
-              ))}
             </div>
           </div>
 
