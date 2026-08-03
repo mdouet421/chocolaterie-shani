@@ -24,11 +24,11 @@ html {
   /* Les Pépites de Shani — atelier chocolaté palette */
   --color-cream: oklch(0.972 0.026 92);
   --color-cream-deep: oklch(0.94 0.042 88);
-  --color-sage: oklch(0.85 0.11 132);
-  --color-leaf: oklch(0.74 0.16 135);
-  --color-olive: oklch(0.63 0.13 130);
-  --color-olive-deep: oklch(0.51 0.11 132);
-  --color-forest: oklch(0.41 0.09 134);
+  --color-sage: oklch(0.86 0.09 118);
+  --color-leaf: oklch(0.75 0.13 120);
+  --color-olive: oklch(0.63 0.12 120);
+  --color-olive-deep: oklch(0.52 0.1 120);
+  --color-forest: oklch(0.47 0.09 122);
   --color-cocoa: oklch(0.37 0.06 55);
   --color-cocoa-deep: oklch(0.27 0.05 52);
   --color-praline: oklch(0.6 0.11 62);
