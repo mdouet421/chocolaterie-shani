@@ -442,7 +442,7 @@ function HomePage() {
             </a>
             <a
               href="#creations"
-              className="border-cocoa/25 text-cocoa hover:border-cocoa/50 rounded-full border px-8 py-3 font-semibold transition-colors"
+              className="border-forest text-forest hover:bg-forest/10 rounded-full border px-8 py-3 font-semibold transition-colors"
             >
               Revoir les recettes
             </a>
