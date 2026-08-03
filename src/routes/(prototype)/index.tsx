@@ -226,7 +226,7 @@ function HomePage() {
       <div className="bg-white">
       <Section id="histoire" className="relative py-20 lg:py-28">
         <div className="relative grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
-          <div className="lg:sticky lg:top-28">
+          <div className="sticky top-24 self-start">
             <p className="bg-leaf/25 text-forest inline-block rounded-full px-3 py-1 text-sm font-semibold tracking-widest uppercase">
               L'histoire
             </p>
