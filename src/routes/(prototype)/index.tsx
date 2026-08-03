@@ -352,7 +352,7 @@ function HomePage() {
       </div>
 
       {/* Contact */}
-      <div id="contact" className="bg-blush/50 text-cocoa-deep relative overflow-hidden">
+      <div id="contact" className="bg-cream text-cocoa-deep relative overflow-hidden">
         <span className="bg-strawberry/20 pointer-events-none absolute -bottom-20 -right-10 h-80 w-80 rounded-full blur-3xl" aria-hidden />
         <span className="bg-strawberry animate-gentle-float pointer-events-none absolute top-16 left-[12%] hidden h-4 w-4 rounded-full sm:block" aria-hidden />
         <span className="bg-forest animate-gentle-float pointer-events-none absolute top-24 right-[14%] hidden h-5 w-5 rounded-full sm:block [animation-delay:1.4s]" aria-hidden />
