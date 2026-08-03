@@ -230,8 +230,9 @@ function HomePage() {
           <div className="max-w-xl">
             <span className="bg-leaf/30 border-olive/40 text-olive-deep inline-flex w-min flex-wrap items-center gap-x-1.5 gap-y-0.5 rounded-full border px-3 py-1 text-xs font-semibold tracking-wide uppercase sm:w-max">
               <span className="bg-orange-zest h-2 w-2 shrink-0 rounded-full" aria-hidden />
-              <span className="whitespace-nowrap">Atelier chocolaté</span>{" "}
-              <span className="whitespace-nowrap">· Bio · Éthique · fait main</span>
+              <span className="whitespace-nowrap">Atelier chocolaté</span>
+              <span className="hidden sm:inline" aria-hidden>·</span>
+              <span className="whitespace-nowrap">Bio · Éthique · fait main</span>
             </span>
             <h1 className="font-display text-forest mt-6 text-5xl leading-[1.05] sm:text-6xl lg:text-7xl">
               De petits chocolats,
