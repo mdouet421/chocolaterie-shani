@@ -17,6 +17,10 @@ html {
     "Segoe UI Symbol", "Noto Color Emoji";
   --font-display: "Young Serif", Georgia, serif;
 
+  --color-*: initial;
+  --color-white: #fff;
+  --color-black: #000;
+
   /* Les Pépites de Shani — atelier chocolaté palette */
   --color-cream: oklch(0.972 0.026 92);
   --color-cream-deep: oklch(0.94 0.042 88);
@@ -32,9 +36,6 @@ html {
   --color-honey: oklch(0.82 0.15 78);
   --color-strawberry: oklch(0.72 0.15 18);
   --color-blush: oklch(0.85 0.09 18);
-  --color-*: initial;
-  --color-white: #fff;
-  --color-black: #000;
 
   --color-neutral-50: oklch(0.985 0 0);
   --color-neutral-100: oklch(0.967 0.001 286.375);
