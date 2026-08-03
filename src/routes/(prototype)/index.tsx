@@ -6,13 +6,6 @@ export const Route = createFileRoute("/(prototype)/")({
 });
 
 const NAV = [
-  { label: "L'histoire", href: "#histoire" },
-  { label: "Les créations", href: "#creations" },
-  { label: "Le sourcing", href: "#sourcing" },
-  { label: "Contact", href: "#contact" },
-];
-
-const MENU_NAV = [
   { label: "Accueil", href: "#top" },
   { label: "L'histoire", href: "#histoire" },
   { label: "Les créations", href: "#creations" },
@@ -173,7 +166,7 @@ function HomePage() {
             href="#contact"
             className="bg-forest hover:bg-olive-deep hidden rounded-full px-5 py-2 text-sm font-semibold text-cream transition-colors md:inline-flex"
           >
-            Commander
+            Me contacter
           </a>
           <div className="relative md:hidden">
             <button
@@ -201,7 +194,7 @@ function HomePage() {
               className={`border-cocoa/10 bg-white/95 absolute -right-6 top-full z-10 mt-3 w-60 origin-top-right rounded-l-3xl border border-r-0 p-3 shadow-[0_30px_60px_-25px_rgba(60,40,20,0.4)] backdrop-blur-xl transition-all duration-300 ease-out sm:-right-8 ${menuOpen ? "pointer-events-auto scale-100 opacity-100" : "pointer-events-none scale-95 opacity-0"}`}
             >
               <nav className="flex flex-col gap-1">
-                {MENU_NAV.map((n) => (
+                {NAV.map((n) => (
                   <a
                     key={n.href}
                     href={n.href}
