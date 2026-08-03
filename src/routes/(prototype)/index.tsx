@@ -15,8 +15,8 @@ const NAV = [
 const CREATIONS = [
   {
     name: "Amandettes",
-    card: "bg-honey/25 border-honey/50",
-    chip: "bg-honey text-cocoa-deep",
+    border: "border-blush",
+    chip: "bg-blush text-cocoa-deep",
     img: "https://images.unsplash.com/photo-1508061253366-f7da158b6d46?auto=format&fit=crop&w=1000&q=80",
     alt: "Amandes torréfiées enrobées de chocolat noir",
     desc: "Des amandes torréfiées, trempées une à une dans un chocolat tempéré, avec une touche de fleur de sel.",
@@ -24,8 +24,8 @@ const CREATIONS = [
   },
   {
     name: "Orangettes",
-    card: "bg-orange-zest/20 border-orange-zest/50",
-    chip: "bg-orange-zest text-cream",
+    border: "border-strawberry",
+    chip: "bg-strawberry text-cream",
     img: "https://images.unsplash.com/photo-1547514701-42782101795e?auto=format&fit=crop&w=1000&q=80",
     alt: "Lamelles d'orange confite trempées dans du chocolat noir",
     desc: "Des écorces d'orange confites, plongées dans un chocolat noir tempéré, franches et parfumées.",
@@ -33,8 +33,8 @@ const CREATIONS = [
   },
   {
     name: "Pralinettes",
-    card: "bg-leaf/25 border-leaf/50",
-    chip: "bg-olive-deep text-cream",
+    border: "border-forest",
+    chip: "bg-forest text-cream",
     img: "https://images.unsplash.com/photo-1481391319762-47dff72954d9?auto=format&fit=crop&w=1000&q=80",
     alt: "Bouchées de praliné dans une coque de chocolat au lait",
     desc: "Un praliné maison de noisettes et d'amandes, blotti dans une fine coque de chocolat au lait.",
@@ -282,7 +282,7 @@ function HomePage() {
             {CREATIONS.map((c, i) => (
               <article
                 key={c.name}
-                className="group border-forest flex flex-col overflow-hidden rounded-3xl border-2 bg-white transition-transform duration-500 ease-out hover:-translate-y-2"
+                className={`group flex flex-col overflow-hidden rounded-3xl border-2 bg-white transition-transform duration-500 ease-out hover:-translate-y-2 ${c.border}`}
               >
                 <div className="relative">
                   <ImageFrame
@@ -292,7 +292,7 @@ function HomePage() {
                     className="aspect-[4/5]"
                   />
                   <span
-                    className="bg-forest text-cream absolute top-4 left-4 flex h-9 w-9 items-center justify-center rounded-full text-sm font-bold shadow"
+                    className={`absolute top-4 left-4 flex h-9 w-9 items-center justify-center rounded-full text-sm font-bold shadow ${c.chip}`}
                   >
                     0{i + 1}
                   </span>
