@@ -174,14 +174,6 @@ function HomePage() {
           className="bg-leaf/40 pointer-events-none absolute -top-32 -right-24 h-96 w-96 rounded-full blur-3xl"
           aria-hidden
         />
-        <div
-          className="bg-honey/50 pointer-events-none absolute top-52 -left-28 h-80 w-80 rounded-full blur-3xl"
-          aria-hidden
-        />
-        <div
-          className="bg-blush/50 pointer-events-none absolute -bottom-20 right-1/3 h-72 w-72 rounded-full blur-3xl"
-          aria-hidden
-        />
         {/* Confetti pépites */}
         <span className="bg-orange-zest animate-gentle-float pointer-events-none absolute top-24 left-[8%] hidden h-4 w-4 rounded-full sm:block" aria-hidden />
         <span className="bg-leaf animate-gentle-float pointer-events-none absolute top-[45%] left-[3%] hidden h-6 w-6 rounded-full lg:block [animation-delay:1.5s]" aria-hidden />
