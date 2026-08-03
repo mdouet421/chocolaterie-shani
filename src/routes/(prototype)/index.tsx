@@ -372,8 +372,8 @@ function HomePage() {
             <p>
               Je suis toujours employée à plein temps en parallèle, ainsi cet
               atelier avance à son rythme, porté par l'envie et la gourmandise.
-              Merci d'en faire partie.
             </p>
+            <p>Merci d'en faire partie.</p>
           </div>
         </div>
       </Section>
