@@ -248,7 +248,6 @@ function HomePage() {
 
       {/* Story */}
       <Section id="histoire" className="relative py-20 lg:py-28">
-        <span className="bg-blush/40 pointer-events-none absolute top-10 right-0 -z-0 h-64 w-64 rounded-full blur-3xl" aria-hidden />
         <div className="relative grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
           <div className="lg:sticky lg:top-28">
             <p className="bg-leaf/25 text-forest inline-block rounded-full px-3 py-1 text-sm font-semibold tracking-widest uppercase">
@@ -285,7 +284,7 @@ function HomePage() {
       </Section>
 
       {/* Creations */}
-      <div className="bg-sage/25">
+      <div className="bg-cream-deep/50">
         <Section id="creations" className="py-20 lg:py-28">
           <div className="max-w-2xl">
             <p className="bg-orange-zest/20 text-orange-zest inline-block rounded-full px-3 py-1 text-sm font-semibold tracking-widest uppercase">
