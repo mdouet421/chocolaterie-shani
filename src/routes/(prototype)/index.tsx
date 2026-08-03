@@ -282,7 +282,7 @@ function HomePage() {
             {CREATIONS.map((c, i) => (
               <article
                 key={c.name}
-                className={`group flex flex-col overflow-hidden rounded-3xl border transition-transform duration-500 ease-out hover:-translate-y-2 ${c.card}`}
+                className="group border-forest flex flex-col overflow-hidden rounded-3xl border-2 bg-white transition-transform duration-500 ease-out hover:-translate-y-2"
               >
                 <div className="relative">
                   <ImageFrame
