@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState, type ReactNode } from "react";
+import { useState, type FormEvent, type ReactNode } from "react";
 
 export const Route = createFileRoute("/(prototype)/")({
   component: HomePage,
@@ -127,6 +127,17 @@ function Section({
 
 function HomePage() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [formOpen, setFormOpen] = useState(false);
+  const [form, setForm] = useState({ email: "", objet: "", contenu: "" });
+
+  const handleSend = (e: FormEvent) => {
+    e.preventDefault();
+    const subject = encodeURIComponent(form.objet);
+    const body = encodeURIComponent(
+      `${form.contenu}\n\nRépondre à : ${form.email}`,
+    );
+    window.location.href = `mailto:bonjour@lespepitesdeshani.fr?subject=${subject}&body=${body}`;
+  };
   return (
     <div className="bg-background text-foreground min-h-dvh">
       {/* Click-outside overlay */}
@@ -427,12 +438,14 @@ function HomePage() {
             ouverte à toute discussion. Écrivez-moi, on en parle.
           </p>
           <div className="mt-9 flex flex-wrap justify-center gap-3">
-            <a
-              href="mailto:bonjour@lespepitesdeshani.fr"
+            <button
+              type="button"
+              onClick={() => setFormOpen((v) => !v)}
+              aria-expanded={formOpen}
               className="bg-forest text-cream hover:bg-olive-deep rounded-full px-8 py-3 font-semibold transition-colors"
             >
               Écrire à Shani
-            </a>
+            </button>
             <a
               href="#creations"
               className="border-forest text-forest hover:bg-forest/10 rounded-full border px-8 py-3 font-semibold transition-colors"
@@ -440,6 +453,80 @@ function HomePage() {
               Revoir les recettes
             </a>
           </div>
+
+          <div
+            className={`overflow-hidden transition-all duration-500 ease-out ${formOpen ? "max-h-[40rem] opacity-100" : "max-h-0 opacity-0"}`}
+          >
+            <form
+              onSubmit={handleSend}
+              className="border-cocoa/10 mx-auto mt-8 max-w-xl space-y-4 rounded-3xl border bg-white p-6 text-left shadow-[0_30px_60px_-30px_rgba(60,40,20,0.35)] sm:p-8"
+            >
+              <div>
+                <label
+                  htmlFor="email"
+                  className="text-cocoa/70 mb-1.5 block text-sm font-semibold"
+                >
+                  Votre e-mail
+                </label>
+                <input
+                  id="email"
+                  type="email"
+                  required
+                  value={form.email}
+                  onChange={(e) =>
+                    setForm((f) => ({ ...f, email: e.target.value }))
+                  }
+                  placeholder="prenom@exemple.fr"
+                  className="border-cocoa/15 focus:border-forest focus:ring-forest/20 w-full rounded-2xl border bg-white px-4 py-3 outline-none transition focus:ring-4"
+                />
+              </div>
+              <div>
+                <label
+                  htmlFor="objet"
+                  className="text-cocoa/70 mb-1.5 block text-sm font-semibold"
+                >
+                  Objet
+                </label>
+                <input
+                  id="objet"
+                  type="text"
+                  required
+                  value={form.objet}
+                  onChange={(e) =>
+                    setForm((f) => ({ ...f, objet: e.target.value }))
+                  }
+                  placeholder="Une commande pour Noël…"
+                  className="border-cocoa/15 focus:border-forest focus:ring-forest/20 w-full rounded-2xl border bg-white px-4 py-3 outline-none transition focus:ring-4"
+                />
+              </div>
+              <div>
+                <label
+                  htmlFor="contenu"
+                  className="text-cocoa/70 mb-1.5 block text-sm font-semibold"
+                >
+                  Votre message
+                </label>
+                <textarea
+                  id="contenu"
+                  required
+                  rows={4}
+                  value={form.contenu}
+                  onChange={(e) =>
+                    setForm((f) => ({ ...f, contenu: e.target.value }))
+                  }
+                  placeholder="Dites-moi tout…"
+                  className="border-cocoa/15 focus:border-forest focus:ring-forest/20 w-full resize-none rounded-2xl border bg-white px-4 py-3 outline-none transition focus:ring-4"
+                />
+              </div>
+              <button
+                type="submit"
+                className="bg-forest text-cream hover:bg-olive-deep w-full rounded-full px-8 py-3 font-semibold transition-colors"
+              >
+                Envoyer le message
+              </button>
+            </form>
+          </div>
+
           <p className="font-display text-strawberry mt-12 text-2xl italic">
             Amicalement, Shani.
           </p>
