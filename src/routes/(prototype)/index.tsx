@@ -170,14 +170,8 @@ function HomePage() {
 
       {/* Hero */}
       <div id="top" className="relative overflow-hidden">
-        <div
-          className="bg-leaf/40 pointer-events-none absolute -top-32 -right-24 h-96 w-96 rounded-full blur-3xl"
-          aria-hidden
-        />
         {/* Confetti pépites */}
-        <span className="bg-orange-zest animate-gentle-float pointer-events-none absolute top-24 left-[8%] hidden h-4 w-4 rounded-full sm:block" aria-hidden />
         <span className="bg-leaf animate-gentle-float pointer-events-none absolute top-[45%] left-[3%] hidden h-6 w-6 rounded-full lg:block [animation-delay:1.5s]" aria-hidden />
-        <span className="bg-strawberry animate-gentle-float pointer-events-none absolute top-16 right-[12%] hidden h-5 w-5 rounded-full sm:block [animation-delay:0.8s]" aria-hidden />
         <span className="bg-honey animate-gentle-float pointer-events-none absolute bottom-24 left-[15%] hidden h-3 w-3 rounded-full md:block [animation-delay:2.2s]" aria-hidden />
         <Section className="relative grid items-center gap-12 pt-16 pb-20 lg:grid-cols-[1.1fr_0.9fr] lg:pt-24 lg:pb-28">
           <div className="max-w-xl">
@@ -232,9 +226,6 @@ function HomePage() {
                 100%
                 <br />
                 maison
-              </span>
-              <span className="bg-strawberry text-cream absolute -bottom-3 -left-3 rounded-full px-4 py-2 text-sm font-semibold shadow-lg [animation-delay:1s]">
-                Miam !
               </span>
             </div>
           </div>
