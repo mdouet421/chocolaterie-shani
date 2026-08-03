@@ -160,7 +160,7 @@ function HomePage() {
 
       {/* Hero */}
       <div id="top" className="relative overflow-hidden">
-        <span className="bg-strawberry/20 pointer-events-none absolute -top-16 -left-10 h-80 w-80 rounded-full blur-3xl" aria-hidden />
+        <span className="bg-strawberry/20 pointer-events-none absolute -bottom-16 -left-10 h-80 w-80 rounded-full blur-3xl" aria-hidden />
         {/* Confetti pépites */}
         <span className="bg-leaf animate-gentle-float pointer-events-none absolute top-[45%] left-[3%] hidden h-6 w-6 rounded-full lg:block [animation-delay:1.5s]" aria-hidden />
         <span className="bg-honey animate-gentle-float pointer-events-none absolute bottom-24 left-[15%] hidden h-3 w-3 rounded-full md:block [animation-delay:2.2s]" aria-hidden />
