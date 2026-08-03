@@ -370,7 +370,7 @@ function HomePage() {
               commencer sans pression, et garder ce côté passion. »
             </blockquote>
             <p>
-              Je travaille encore en parallèle, et c'est très bien ainsi : cet
+              Je suis toujours employée à plein temps en parallèle, ainsi cet
               atelier avance à son rythme, porté par l'envie et la gourmandise.
               Merci d'en faire partie.
             </p>
