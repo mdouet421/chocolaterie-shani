@@ -75,6 +75,27 @@ const SOURCING = [
   },
 ];
 
+const INSTAGRAM_URL = "https://instagram.com/lespepitesdeshani";
+
+function InstagramIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden
+      className={className}
+    >
+      <rect x="3" y="3" width="18" height="18" rx="5" />
+      <circle cx="12" cy="12" r="4" />
+      <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+    </svg>
+  );
+}
+
 function ImageFrame({
   src,
   alt,
@@ -288,6 +309,15 @@ function HomePage() {
               >
                 Rencontrer Shani
               </a>
+              <a
+                href={INSTAGRAM_URL}
+                target="_blank"
+                rel="noreferrer"
+                className="text-cocoa/70 hover:text-strawberry inline-flex items-center gap-2 font-semibold transition-colors"
+              >
+                <InstagramIcon className="h-5 w-5" />
+                Suivre sur Instagram
+              </a>
             </div>
           </div>
 
@@ -470,6 +500,15 @@ function HomePage() {
               className="border-forest text-forest hover:bg-forest/10 rounded-full border px-8 py-3 font-semibold transition-colors"
             >
               Revoir les recettes
+            </a>
+            <a
+              href={INSTAGRAM_URL}
+              target="_blank"
+              rel="noreferrer"
+              className="border-strawberry text-strawberry hover:bg-strawberry/10 inline-flex items-center gap-2 rounded-full border px-8 py-3 font-semibold transition-colors"
+            >
+              <InstagramIcon className="h-5 w-5" />
+              Instagram
             </a>
           </div>
 
