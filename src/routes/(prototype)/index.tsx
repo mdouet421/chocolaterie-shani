@@ -125,20 +125,6 @@ function Section({
   );
 }
 
-function Pepites({ dots }: { dots: string[] }) {
-  return (
-    <>
-      {dots.map((d, i) => (
-        <span
-          key={i}
-          aria-hidden
-          className={`animate-gentle-float pointer-events-none absolute hidden rounded-full md:block ${d}`}
-        />
-      ))}
-    </>
-  );
-}
-
 function HomePage() {
   return (
     <div className="bg-background text-foreground min-h-dvh">
@@ -177,13 +163,6 @@ function HomePage() {
 
       {/* Hero */}
       <div id="top" className="relative overflow-hidden">
-        <Pepites
-          dots={[
-            "bg-leaf h-3 w-3 top-10 left-[6%]",
-            "bg-strawberry h-2.5 w-2.5 bottom-12 left-[18%] [animation-delay:2.2s]",
-            "bg-chocolate h-2 w-2 bottom-16 right-[8%] [animation-delay:0.8s]",
-          ]}
-        />
         <Section className="relative grid items-center gap-12 pt-16 pb-20 lg:grid-cols-[1.1fr_0.9fr] lg:pt-24 lg:pb-28">
           <div className="max-w-xl">
             <span className="bg-leaf/30 border-olive/40 text-olive-deep inline-flex items-center gap-2 rounded-full border px-3 py-1 text-xs font-semibold tracking-wide uppercase">
@@ -244,14 +223,7 @@ function HomePage() {
       </div>
 
       {/* Story */}
-      <div className="bg-white relative overflow-hidden">
-        <Pepites
-          dots={[
-            "bg-strawberry h-2.5 w-2.5 top-8 right-[6%]",
-            "bg-leaf h-3 w-3 bottom-10 left-[5%] [animation-delay:1.6s]",
-            "bg-chocolate h-2 w-2 top-10 left-[10%] [animation-delay:1s]",
-          ]}
-        />
+      <div className="bg-white">
       <Section id="histoire" className="relative py-20 lg:py-28">
         <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
           <div>
@@ -290,14 +262,7 @@ function HomePage() {
       </div>
 
       {/* Creations */}
-      <div className="bg-sage/40 relative overflow-hidden">
-        <Pepites
-          dots={[
-            "bg-strawberry h-3 w-3 top-8 right-[5%]",
-            "bg-chocolate h-2.5 w-2.5 bottom-10 left-[4%] [animation-delay:1.4s]",
-            "bg-forest h-2 w-2 top-10 left-[12%] [animation-delay:0.6s]",
-          ]}
-        />
+      <div className="bg-sage/40">
         <Section id="creations" className="py-20 lg:py-28">
           <div className="max-w-2xl">
             <p className="bg-orange-zest/20 text-orange-zest inline-block rounded-full px-3 py-1 text-sm font-semibold tracking-widest uppercase">
@@ -348,14 +313,7 @@ function HomePage() {
       </div>
 
       {/* Sourcing */}
-      <div className="bg-white relative overflow-hidden">
-        <Pepites
-          dots={[
-            "bg-forest h-3 w-3 top-10 left-[5%]",
-            "bg-strawberry h-2.5 w-2.5 bottom-12 right-[6%] [animation-delay:1.2s]",
-            "bg-chocolate h-2 w-2 top-12 right-[10%] [animation-delay:2s]",
-          ]}
-        />
+      <div className="bg-white">
       <Section id="sourcing" className="py-20 lg:py-28">
         <div className="grid gap-12 lg:grid-cols-[1fr_1fr] lg:items-center">
           <div>
@@ -396,13 +354,6 @@ function HomePage() {
       {/* Contact */}
       <div id="contact" className="bg-cream text-cocoa-deep relative overflow-hidden">
         <span className="bg-strawberry/20 pointer-events-none absolute -bottom-20 -right-10 h-80 w-80 rounded-full blur-3xl" aria-hidden />
-        <Pepites
-          dots={[
-            "bg-strawberry h-4 w-4 top-12 left-[12%]",
-            "bg-forest h-5 w-5 top-16 right-[14%] [animation-delay:1.4s]",
-            "bg-chocolate h-3 w-3 bottom-16 left-[22%] [animation-delay:0.7s]",
-          ]}
-        />
         <Section className="relative py-20 text-center lg:py-28">
           <img
             src="/logo-shani.jpeg"
@@ -439,13 +390,7 @@ function HomePage() {
       </div>
 
       {/* Footer */}
-      <footer className="border-cocoa/10 bg-white relative overflow-hidden border-t">
-        <Pepites
-          dots={[
-            "bg-forest h-2 w-2 top-3 right-[8%]",
-            "bg-strawberry h-2 w-2 bottom-3 left-[10%]",
-          ]}
-        />
+      <footer className="border-cocoa/10 bg-white border-t">
         <div className="text-cocoa/60 mx-auto flex w-full max-w-6xl flex-col items-center justify-between gap-3 px-6 py-8 text-sm sm:flex-row sm:px-8">
           <span className="font-display text-forest text-base">
             Les Pépites de Shani — Atelier chocolaté
