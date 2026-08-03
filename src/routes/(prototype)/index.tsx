@@ -418,13 +418,11 @@ function HomePage() {
       <div id="contact" className="bg-cream text-cocoa-deep relative overflow-hidden">
         <span className="bg-strawberry/20 pointer-events-none absolute -bottom-20 -right-10 h-80 w-80 rounded-full blur-3xl" aria-hidden />
         <Section className="relative py-20 text-center lg:py-28">
-          <div className="mx-auto inline-block bg-white p-5">
-            <img
-              src="/logo-shani.jpeg"
-              alt="Les Pépites de Shani"
-              className="h-24 w-24 rounded-full object-cover"
-            />
-          </div>
+          <img
+            src="/logo-shani.jpeg"
+            alt="Les Pépites de Shani"
+            className="mx-auto h-24 w-24 rounded-full object-cover ring-[14px] ring-white"
+          />
           <h2 className="font-display text-forest mt-8 text-4xl leading-tight sm:text-5xl">
             J'espère que mes chocolats
             <br className="hidden sm:block" /> vous{" "}
