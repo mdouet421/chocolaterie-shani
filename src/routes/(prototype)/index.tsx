@@ -45,7 +45,7 @@ const CREATIONS = [
     name: "Pralinettes",
     card: "bg-leaf/25 border-leaf/50",
     chip: "bg-olive-deep text-cream",
-    img: "https://images.unsplash.com/photo-1526081347589-7fa3cb680983?auto=format&fit=crop&w=1000&q=80",
+    img: "https://images.unsplash.com/photo-1481391319762-47dff72954d9?auto=format&fit=crop&w=1000&q=80",
     alt: "Bouchées de praliné dans une coque de chocolat au lait",
     desc: "Un praliné maison de noisettes et d'amandes, blotti dans une fine coque de chocolat au lait.",
     note: "praliné maison · chocolat au lait",
