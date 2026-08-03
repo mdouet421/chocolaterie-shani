@@ -366,7 +366,7 @@ function HomePage() {
               nouveau monde, doucement mais sûrement.
             </p>
             <blockquote className="bg-honey/35 text-forest my-8 rounded-3xl px-7 py-6 font-display text-2xl leading-snug italic">
-              « Je préfère le bouche à oreille aux grandes stratégies :
+              « Je préfère le bouche à oreille aux grandes stratégies commerciales :
               commencer sans pression, et garder ce côté passion. »
             </blockquote>
             <p>
