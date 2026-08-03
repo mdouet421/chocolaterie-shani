@@ -321,7 +321,7 @@ function HomePage() {
             </div>
           </div>
 
-          <div className="relative mx-auto w-full max-w-md">
+          <div className="relative mx-auto w-full max-w-md order-first lg:order-none">
             <div className="bg-leaf/40 absolute inset-0 -rotate-6 rounded-[2.5rem]" aria-hidden />
             <div className="bg-blush/70 absolute inset-0 rotate-3 rounded-[2.5rem]" aria-hidden />
             <div className="border-cocoa/10 bg-white relative rounded-[2.5rem] border p-6 shadow-[0_30px_60px_-30px_rgba(60,40,20,0.35)]">
