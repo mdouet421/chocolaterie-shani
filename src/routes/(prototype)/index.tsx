@@ -12,6 +12,13 @@ const NAV = [
   { label: "Contact", href: "#contact" },
 ];
 
+const MENU_NAV = [
+  { label: "Accueil", href: "#top" },
+  { label: "L'histoire", href: "#histoire" },
+  { label: "Les créations", href: "#creations" },
+  { label: "Le sourcing", href: "#sourcing" },
+];
+
 const CREATIONS = [
   {
     name: "Amandettes",
@@ -194,7 +201,7 @@ function HomePage() {
               className={`border-cocoa/10 bg-white/95 absolute -right-6 top-full z-10 mt-3 w-60 origin-top-right rounded-l-3xl border border-r-0 p-3 shadow-[0_30px_60px_-25px_rgba(60,40,20,0.4)] backdrop-blur-xl transition-all duration-300 ease-out sm:-right-8 ${menuOpen ? "pointer-events-auto scale-100 opacity-100" : "pointer-events-none scale-95 opacity-0"}`}
             >
               <nav className="flex flex-col gap-1">
-                {NAV.map((n) => (
+                {MENU_NAV.map((n) => (
                   <a
                     key={n.href}
                     href={n.href}
@@ -209,7 +216,7 @@ function HomePage() {
                   onClick={() => setMenuOpen(false)}
                   className="bg-forest hover:bg-olive-deep mt-2 rounded-full px-5 py-2.5 text-center text-sm font-semibold text-cream transition-colors"
                 >
-                  Commander
+                  Me contacter
                 </a>
               </nav>
             </div>
