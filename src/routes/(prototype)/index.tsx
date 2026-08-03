@@ -292,7 +292,7 @@ function HomePage() {
                     className="aspect-[4/5]"
                   />
                   <span
-                    className={`absolute top-4 left-4 flex h-9 w-9 items-center justify-center rounded-full text-sm font-bold shadow ${c.chip}`}
+                    className="bg-forest text-cream absolute top-4 left-4 flex h-9 w-9 items-center justify-center rounded-full text-sm font-bold shadow"
                   >
                     0{i + 1}
                   </span>
