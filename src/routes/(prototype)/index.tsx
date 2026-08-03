@@ -486,7 +486,18 @@ function HomePage() {
             Une envie, une question, une commande pour une occasion ? Je suis
             ouverte à toute discussion. Écrivez-moi, on en parle.
           </p>
-          <div className="mt-9 flex flex-wrap justify-center gap-3">
+          <div className="mt-8 flex justify-center">
+            <a
+              href={INSTAGRAM_URL}
+              target="_blank"
+              rel="noreferrer"
+              className="text-strawberry hover:text-strawberry/80 inline-flex items-center gap-2 font-semibold transition-colors"
+            >
+              <InstagramIcon className="h-5 w-5" />
+              Me suivre sur Instagram
+            </a>
+          </div>
+          <div className="mt-6 flex flex-wrap justify-center gap-3">
             <button
               type="button"
               onClick={() => setFormOpen((v) => !v)}
@@ -500,15 +511,6 @@ function HomePage() {
               className="border-forest text-forest hover:bg-forest/10 rounded-full border px-8 py-3 font-semibold transition-colors"
             >
               Revoir les recettes
-            </a>
-            <a
-              href={INSTAGRAM_URL}
-              target="_blank"
-              rel="noreferrer"
-              className="border-strawberry text-strawberry hover:bg-strawberry/10 inline-flex items-center gap-2 rounded-full border px-8 py-3 font-semibold transition-colors"
-            >
-              <InstagramIcon className="h-5 w-5" />
-              Instagram
             </a>
           </div>
 
