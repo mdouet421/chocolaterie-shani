@@ -1,15 +1,15 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState, type ReactNode } from "react";
+import { useState, type FormEvent, type ReactNode } from "react";
 
 export const Route = createFileRoute("/(prototype)/")({
   component: HomePage,
 });
 
 const NAV = [
+  { label: "Accueil", href: "#top" },
   { label: "L'histoire", href: "#histoire" },
   { label: "Les créations", href: "#creations" },
   { label: "Le sourcing", href: "#sourcing" },
-  { label: "Contact", href: "#contact" },
 ];
 
 const CREATIONS = [
@@ -57,7 +57,7 @@ const SOURCING = [
   },
   {
     title: "Amandes & noisettes",
-    from: "petits producteurs",
+    from: "La Fourche",
     body: "Choisies avec soin auprès de filières bio. La sélection s'affine au fil des rencontres.",
     card: "bg-honey/30 text-cocoa-deep",
     dot: "bg-orange-zest",
@@ -66,14 +66,35 @@ const SOURCING = [
   },
   {
     title: "Les oranges bio",
-    from: "au marché",
-    body: "Cueillies chez le maraîcher du coin, confites patiemment avant leur bain de chocolat.",
+    from: "Au marché",
+    body: "Cueillies chez un maraîcher local au coeur du Cotentin, confites patiemment avant leur bain de chocolat.",
     card: "bg-sage/40 text-cocoa-deep",
     dot: "bg-strawberry",
     fromColor: "text-strawberry",
     bodyColor: "text-cocoa/80",
   },
 ];
+
+const INSTAGRAM_URL = "https://instagram.com/lespepitesdeshani";
+
+function InstagramIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden
+      className={className}
+    >
+      <rect x="3" y="3" width="18" height="18" rx="5" />
+      <circle cx="12" cy="12" r="4" />
+      <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+    </svg>
+  );
+}
 
 function ImageFrame({
   src,
@@ -126,10 +147,50 @@ function Section({
 }
 
 function HomePage() {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [formOpen, setFormOpen] = useState(false);
+  const [sent, setSent] = useState(false);
+  const [form, setForm] = useState({ email: "", objet: "", contenu: "" });
+  const [errors, setErrors] = useState({ email: "", objet: "", contenu: "" });
+
+  const handleSend = (e: FormEvent) => {
+    e.preventDefault();
+    const next = {
+      email: !form.email.trim()
+        ? "J'ai besoin de votre e-mail pour vous répondre."
+        : !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email.trim())
+          ? "Cet e-mail semble incomplet, pouvez-vous le vérifier ?"
+          : "",
+      objet: !form.objet.trim()
+        ? "Donnez un petit objet à votre message."
+        : "",
+      contenu: !form.contenu.trim()
+        ? "Dites-moi quelques mots avant d'envoyer."
+        : "",
+    };
+    setErrors(next);
+    if (next.email || next.objet || next.contenu) return;
+    console.log("Nouveau message à envoyer :", {
+      to: "bonjour@lespepitesdeshani.fr",
+      replyTo: form.email,
+      objet: form.objet,
+      contenu: form.contenu,
+    });
+    setSent(true);
+  };
   return (
     <div className="bg-background text-foreground min-h-dvh">
+      {/* Click-outside overlay */}
+      <button
+        type="button"
+        aria-hidden
+        tabIndex={-1}
+        onClick={() => setMenuOpen(false)}
+        className={`fixed inset-0 z-40 cursor-default md:hidden ${menuOpen ? "block" : "hidden"}`}
+      />
+
       {/* Header */}
-      <header className="border-cocoa/10 bg-white/90 sticky top-0 z-50 border-b backdrop-blur-md">
+      <header className="border-cocoa/10 bg-white/70 sticky top-0 z-50 border-b backdrop-blur-xl">
         <div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-4 px-6 py-3 sm:px-8">
           <a href="#top" className="flex items-center gap-3">
             <img
@@ -154,10 +215,56 @@ function HomePage() {
           </nav>
           <a
             href="#contact"
-            className="bg-forest hover:bg-olive-deep rounded-full px-5 py-2 text-sm font-semibold text-cream transition-colors"
+            className="bg-forest hover:bg-olive-deep hidden rounded-full px-5 py-2 text-sm font-semibold text-cream transition-colors md:inline-flex"
           >
-            Commander
+            Me contacter
           </a>
+          <div className="relative md:hidden">
+            <button
+              type="button"
+              aria-label="Ouvrir le menu"
+              aria-expanded={menuOpen}
+              onClick={() => setMenuOpen((v) => !v)}
+              className="border-cocoa/15 text-forest hover:bg-forest/5 relative z-10 inline-flex h-11 w-11 items-center justify-center rounded-full border transition-colors"
+            >
+              <span className="relative block h-4 w-5" aria-hidden>
+                <span
+                  className={`bg-forest absolute left-0 block h-0.5 w-5 rounded-full transition-all duration-300 ${menuOpen ? "top-1.5 rotate-45" : "top-0"}`}
+                />
+                <span
+                  className={`bg-forest absolute top-1.5 left-0 block h-0.5 w-5 rounded-full transition-all duration-300 ${menuOpen ? "opacity-0" : "opacity-100"}`}
+                />
+                <span
+                  className={`bg-forest absolute left-0 block h-0.5 w-5 rounded-full transition-all duration-300 ${menuOpen ? "top-1.5 -rotate-45" : "top-3"}`}
+                />
+              </span>
+            </button>
+
+            {/* Floating menu */}
+            <div
+              className={`border-cocoa/10 bg-white/95 absolute -right-6 top-full z-10 mt-3 w-60 origin-top-right rounded-l-3xl border border-r-0 p-3 shadow-[0_30px_60px_-25px_rgba(60,40,20,0.4)] backdrop-blur-xl transition-all duration-300 ease-out sm:-right-8 ${menuOpen ? "pointer-events-auto scale-100 opacity-100" : "pointer-events-none scale-95 opacity-0"}`}
+            >
+              <nav className="flex flex-col gap-1">
+                {NAV.map((n) => (
+                  <a
+                    key={n.href}
+                    href={n.href}
+                    onClick={() => setMenuOpen(false)}
+                    className="text-cocoa/80 hover:bg-forest/5 hover:text-forest rounded-2xl px-4 py-2.5 text-base font-medium transition-colors"
+                  >
+                    {n.label}
+                  </a>
+                ))}
+                <a
+                  href="#contact"
+                  onClick={() => setMenuOpen(false)}
+                  className="bg-forest hover:bg-olive-deep mt-2 rounded-full px-5 py-2.5 text-center text-sm font-semibold text-cream transition-colors"
+                >
+                  Me contacter
+                </a>
+              </nav>
+            </div>
+          </div>
         </div>
       </header>
 
@@ -165,9 +272,11 @@ function HomePage() {
       <div id="top" className="relative overflow-hidden">
         <Section className="relative grid items-center gap-12 pt-16 pb-20 lg:grid-cols-[1.1fr_0.9fr] lg:pt-24 lg:pb-28">
           <div className="max-w-xl">
-            <span className="bg-leaf/30 border-olive/40 text-olive-deep inline-flex items-center gap-2 rounded-full border px-3 py-1 text-xs font-semibold tracking-wide uppercase">
-              <span className="bg-orange-zest h-2 w-2 rounded-full" aria-hidden />
-              Atelier chocolaté · Bio · Éthique · fait main
+            <span className="bg-leaf/30 border-olive/40 text-olive-deep inline-flex w-min flex-wrap items-center gap-x-1.5 gap-y-0.5 rounded-full border px-3 py-1 text-xs font-semibold tracking-wide uppercase sm:w-max">
+              <span className="bg-orange-zest h-2 w-2 shrink-0 rounded-full" aria-hidden />
+              <span className="whitespace-nowrap">Atelier chocolaté</span>
+              <span className="hidden sm:inline" aria-hidden>·</span>
+              <span className="whitespace-nowrap">Bio · Éthique · fait main</span>
             </span>
             <h1 className="font-display text-forest mt-6 text-5xl leading-[1.05] sm:text-6xl lg:text-7xl">
               De petits chocolats,
@@ -199,6 +308,15 @@ function HomePage() {
                 className="border-forest text-forest hover:bg-forest/10 rounded-full border px-7 py-3 font-semibold transition-colors"
               >
                 Rencontrer Shani
+              </a>
+              <a
+                href={INSTAGRAM_URL}
+                target="_blank"
+                rel="noreferrer"
+                className="text-cocoa/70 hover:text-strawberry inline-flex items-center gap-2 font-semibold transition-colors"
+              >
+                <InstagramIcon className="h-5 w-5" />
+                Suivre sur Instagram
               </a>
             </div>
           </div>
@@ -248,14 +366,14 @@ function HomePage() {
               nouveau monde, doucement mais sûrement.
             </p>
             <blockquote className="bg-honey/35 text-forest my-8 rounded-3xl px-7 py-6 font-display text-2xl leading-snug italic">
-              « Je préfère le bouche à oreille aux grandes stratégies :
+              « Je préfère le bouche à oreille aux grandes stratégies commerciales :
               commencer sans pression, et garder ce côté passion. »
             </blockquote>
             <p>
-              Je travaille encore en parallèle, et c'est très bien ainsi : cet
+              Je suis toujours employée à plein temps en parallèle, ainsi cet
               atelier avance à son rythme, porté par l'envie et la gourmandise.
-              Merci d'en faire partie.
             </p>
+            <p>Merci d'en faire partie.</p>
           </div>
         </div>
       </Section>
@@ -273,8 +391,8 @@ function HomePage() {
               <span className="text-orange-zest">trois recettes</span>.
             </h2>
             <p className="text-cocoa/75 mt-4 text-lg">
-              Juste trois, mais faites avec attention. Chaque bouchée est
-              trempée et tempérée à la main.
+              Juste trois, mais réfléchies et préparées avec amour et passion.
+              Chaque bouchée est trempée et tempérée à la main.
             </p>
           </div>
 
@@ -352,13 +470,12 @@ function HomePage() {
       </div>
 
       {/* Contact */}
-      <div id="contact" className="bg-cream text-cocoa-deep relative overflow-hidden">
-        <span className="bg-strawberry/20 pointer-events-none absolute -bottom-20 -right-10 h-80 w-80 rounded-full blur-3xl" aria-hidden />
+      <div id="contact" className="bg-blush/40 text-cocoa-deep relative overflow-hidden">
         <Section className="relative py-20 text-center lg:py-28">
           <img
             src="/logo-shani.jpeg"
             alt="Les Pépites de Shani"
-            className="ring-strawberry/40 mx-auto h-24 w-24 rounded-full object-cover ring-4"
+            className="mx-auto h-40 w-40 rounded-full object-cover ring-[14px] ring-white"
           />
           <h2 className="font-display text-forest mt-8 text-4xl leading-tight sm:text-5xl">
             J'espère que mes chocolats
@@ -369,20 +486,134 @@ function HomePage() {
             Une envie, une question, une commande pour une occasion ? Je suis
             ouverte à toute discussion. Écrivez-moi, on en parle.
           </p>
-          <div className="mt-9 flex flex-wrap justify-center gap-3">
+          <div className="mt-8 flex justify-center">
             <a
-              href="mailto:bonjour@lespepitesdeshani.fr"
+              href={INSTAGRAM_URL}
+              target="_blank"
+              rel="noreferrer"
+              className="text-cocoa/70 hover:text-strawberry inline-flex items-center gap-2 font-semibold transition-colors"
+            >
+              <InstagramIcon className="h-5 w-5" />
+              Me suivre sur Instagram
+            </a>
+          </div>
+          <div className="mt-6 flex flex-wrap justify-center gap-3">
+            <button
+              type="button"
+              onClick={() => setFormOpen((v) => !v)}
+              aria-expanded={formOpen}
               className="bg-forest text-cream hover:bg-olive-deep rounded-full px-8 py-3 font-semibold transition-colors"
             >
               Écrire à Shani
-            </a>
+            </button>
             <a
               href="#creations"
-              className="border-cocoa/25 text-cocoa hover:border-cocoa/50 rounded-full border px-8 py-3 font-semibold transition-colors"
+              className="border-forest text-forest hover:bg-forest/10 rounded-full border px-8 py-3 font-semibold transition-colors"
             >
               Revoir les recettes
             </a>
           </div>
+
+          <div
+            className={`overflow-hidden transition-all duration-500 ease-out ${formOpen ? "max-h-[40rem] opacity-100" : "max-h-0 opacity-0"}`}
+          >
+            {sent ? (
+              <div className="border-cocoa/10 mx-auto mt-8 max-w-xl rounded-3xl border bg-white p-8 text-center shadow-[0_30px_60px_-30px_rgba(60,40,20,0.35)]">
+                <p className="font-display text-forest text-2xl">
+                  Merci, votre message est bien noté !
+                </p>
+                <p className="text-cocoa/70 mt-3">
+                  Je vous répondrai avec plaisir dès que possible.
+                </p>
+              </div>
+            ) : (
+            <form
+              noValidate
+              onSubmit={handleSend}
+              className="border-cocoa/10 mx-auto mt-8 max-w-xl space-y-4 rounded-3xl border bg-white p-6 text-left shadow-[0_30px_60px_-30px_rgba(60,40,20,0.35)] sm:p-8"
+            >
+              <div>
+                <label
+                  htmlFor="email"
+                  className="text-cocoa/70 mb-1.5 block text-sm font-semibold"
+                >
+                  Votre e-mail
+                </label>
+                <input
+                  id="email"
+                  type="email"
+                  value={form.email}
+                  onChange={(e) => {
+                    setForm((f) => ({ ...f, email: e.target.value }));
+                    setErrors((x) => ({ ...x, email: "" }));
+                  }}
+                  placeholder="prenom@exemple.fr"
+                  className={`w-full rounded-2xl border bg-white px-4 py-3 outline-none transition focus:ring-4 ${errors.email ? "border-strawberry focus:border-strawberry focus:ring-strawberry/20" : "border-cocoa/15 focus:border-forest focus:ring-forest/20"}`}
+                />
+                {errors.email && (
+                  <p className="text-strawberry mt-1.5 text-sm">
+                    {errors.email}
+                  </p>
+                )}
+              </div>
+              <div>
+                <label
+                  htmlFor="objet"
+                  className="text-cocoa/70 mb-1.5 block text-sm font-semibold"
+                >
+                  Objet
+                </label>
+                <input
+                  id="objet"
+                  type="text"
+                  value={form.objet}
+                  onChange={(e) => {
+                    setForm((f) => ({ ...f, objet: e.target.value }));
+                    setErrors((x) => ({ ...x, objet: "" }));
+                  }}
+                  placeholder="Une commande pour Noël…"
+                  className={`w-full rounded-2xl border bg-white px-4 py-3 outline-none transition focus:ring-4 ${errors.objet ? "border-strawberry focus:border-strawberry focus:ring-strawberry/20" : "border-cocoa/15 focus:border-forest focus:ring-forest/20"}`}
+                />
+                {errors.objet && (
+                  <p className="text-strawberry mt-1.5 text-sm">
+                    {errors.objet}
+                  </p>
+                )}
+              </div>
+              <div>
+                <label
+                  htmlFor="contenu"
+                  className="text-cocoa/70 mb-1.5 block text-sm font-semibold"
+                >
+                  Votre message
+                </label>
+                <textarea
+                  id="contenu"
+                  rows={4}
+                  value={form.contenu}
+                  onChange={(e) => {
+                    setForm((f) => ({ ...f, contenu: e.target.value }));
+                    setErrors((x) => ({ ...x, contenu: "" }));
+                  }}
+                  placeholder="Dites-moi tout…"
+                  className={`w-full resize-none rounded-2xl border bg-white px-4 py-3 outline-none transition focus:ring-4 ${errors.contenu ? "border-strawberry focus:border-strawberry focus:ring-strawberry/20" : "border-cocoa/15 focus:border-forest focus:ring-forest/20"}`}
+                />
+                {errors.contenu && (
+                  <p className="text-strawberry mt-1.5 text-sm">
+                    {errors.contenu}
+                  </p>
+                )}
+              </div>
+              <button
+                type="submit"
+                className="bg-forest text-cream hover:bg-olive-deep w-full rounded-full px-8 py-3 font-semibold transition-colors"
+              >
+                Envoyer le message
+              </button>
+            </form>
+            )}
+          </div>
+
           <p className="font-display text-strawberry mt-12 text-2xl italic">
             Amicalement, Shani.
           </p>
