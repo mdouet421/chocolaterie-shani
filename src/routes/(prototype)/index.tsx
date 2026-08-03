@@ -14,14 +14,6 @@ const NAV = [
 
 const VALUES = ["Bio", "Éthique", "Fait main", "Édition de Noël", "Tempéré maison"];
 
-const VALUE_STYLES = [
-  "bg-leaf/30 text-forest",
-  "bg-orange-zest/25 text-orange-zest",
-  "bg-honey/40 text-cocoa-deep",
-  "bg-strawberry/25 text-strawberry",
-  "bg-olive-deep text-cream",
-];
-
 const CREATIONS = [
   {
     name: "Amandettes",
@@ -231,14 +223,17 @@ function HomePage() {
           </div>
         </Section>
 
-        {/* Values pills */}
+        {/* Values mentions */}
         <div className="border-cocoa/10 bg-cream-deep border-y">
-          <div className="mx-auto flex w-full max-w-6xl flex-wrap items-center justify-center gap-3 px-6 py-6 sm:px-8">
+          <div className="mx-auto flex w-full max-w-6xl flex-wrap items-center justify-center gap-x-5 gap-y-2 px-6 py-5 sm:px-8">
             {VALUES.map((v, i) => (
               <span
                 key={v}
-                className={`rounded-full px-4 py-1.5 text-sm font-semibold ${VALUE_STYLES[i % VALUE_STYLES.length]}`}
+                className="text-cocoa/70 flex items-center gap-5 text-sm font-semibold tracking-wide uppercase"
               >
+                {i > 0 && (
+                  <span className="bg-leaf h-1.5 w-1.5 rounded-full" aria-hidden />
+                )}
                 {v}
               </span>
             ))}
