@@ -13,8 +13,22 @@ html {
 
 @theme {
   --font-sans:
-    "Inter Variable", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
-    "Noto Color Emoji";
+    "Hanken Grotesk Variable", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+  --font-display: "Young Serif", Georgia, serif;
+
+  /* Les Pépites de Shani — atelier chocolaté palette */
+  --color-cream: oklch(0.968 0.018 92);
+  --color-cream-deep: oklch(0.938 0.028 88);
+  --color-sage: oklch(0.86 0.06 128);
+  --color-olive: oklch(0.62 0.1 128);
+  --color-olive-deep: oklch(0.5 0.09 130);
+  --color-forest: oklch(0.4 0.07 132);
+  --color-cocoa: oklch(0.36 0.055 55);
+  --color-cocoa-deep: oklch(0.27 0.045 52);
+  --color-praline: oklch(0.58 0.09 62);
+  --color-orange-zest: oklch(0.72 0.16 55);
+  --color-blush: oklch(0.86 0.055 20);
   --color-*: initial;
   --color-white: #fff;
   --color-black: #000;
@@ -84,8 +98,8 @@ html {
 }
 
 :root {
-  --background: var(--color-white);
-  --foreground: var(--color-neutral-950);
+  --background: var(--color-cream);
+  --foreground: var(--color-cocoa-deep);
   --card: var(--color-white);
   --card-foreground: var(--color-neutral-950);
   --popover: var(--color-white);
@@ -163,7 +177,7 @@ html {
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-neutral-50 text-foreground font-sans min-h-dvh flex flex-col flex-1;
+    @apply bg-background text-foreground font-sans min-h-dvh flex flex-col flex-1;
 
     @media all and (display-mode: standalone) {
       height: 100lvh; /* Force full height on iOS standalone */
