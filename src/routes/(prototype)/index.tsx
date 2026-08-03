@@ -129,6 +129,15 @@ function HomePage() {
   const [menuOpen, setMenuOpen] = useState(false);
   return (
     <div className="bg-background text-foreground min-h-dvh">
+      {/* Click-outside overlay */}
+      <button
+        type="button"
+        aria-hidden
+        tabIndex={-1}
+        onClick={() => setMenuOpen(false)}
+        className={`fixed inset-0 z-40 cursor-default md:hidden ${menuOpen ? "block" : "hidden"}`}
+      />
+
       {/* Header */}
       <header className="border-cocoa/10 bg-white/90 sticky top-0 z-50 border-b backdrop-blur-md">
         <div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-4 px-6 py-3 sm:px-8">
@@ -179,15 +188,6 @@ function HomePage() {
                 />
               </span>
             </button>
-
-            {/* Click-outside overlay */}
-            <button
-              type="button"
-              aria-hidden
-              tabIndex={-1}
-              onClick={() => setMenuOpen(false)}
-              className={`fixed inset-0 z-0 cursor-default ${menuOpen ? "block" : "hidden"}`}
-            />
 
             {/* Floating menu */}
             <div
