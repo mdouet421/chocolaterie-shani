@@ -247,6 +247,7 @@ function HomePage() {
       </div>
 
       {/* Story */}
+      <div className="bg-white">
       <Section id="histoire" className="relative py-20 lg:py-28">
         <div className="relative grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
           <div className="lg:sticky lg:top-28">
@@ -282,9 +283,10 @@ function HomePage() {
           </div>
         </div>
       </Section>
+      </div>
 
       {/* Creations */}
-      <div className="bg-cream-deep/50">
+      <div className="bg-sage/40">
         <Section id="creations" className="py-20 lg:py-28">
           <div className="max-w-2xl">
             <p className="bg-orange-zest/20 text-orange-zest inline-block rounded-full px-3 py-1 text-sm font-semibold tracking-widest uppercase">
@@ -335,6 +337,7 @@ function HomePage() {
       </div>
 
       {/* Sourcing */}
+      <div className="bg-white">
       <Section id="sourcing" className="py-20 lg:py-28">
         <div className="grid gap-12 lg:grid-cols-[1fr_1fr] lg:items-center">
           <div>
@@ -370,51 +373,51 @@ function HomePage() {
           </div>
         </div>
       </Section>
+      </div>
 
       {/* Contact */}
-      <div id="contact" className="bg-forest text-cream relative overflow-hidden">
-        <span className="bg-olive-deep/60 pointer-events-none absolute -top-16 -left-10 h-72 w-72 rounded-full blur-3xl" aria-hidden />
-        <span className="bg-honey/30 pointer-events-none absolute -bottom-20 -right-10 h-80 w-80 rounded-full blur-3xl" aria-hidden />
-        <span className="bg-honey animate-gentle-float pointer-events-none absolute top-16 left-[12%] hidden h-4 w-4 rounded-full sm:block" aria-hidden />
-        <span className="bg-orange-zest animate-gentle-float pointer-events-none absolute top-24 right-[14%] hidden h-5 w-5 rounded-full sm:block [animation-delay:1.4s]" aria-hidden />
+      <div id="contact" className="bg-blush/50 text-cocoa-deep relative overflow-hidden">
+        <span className="bg-strawberry/20 pointer-events-none absolute -bottom-20 -right-10 h-80 w-80 rounded-full blur-3xl" aria-hidden />
+        <span className="bg-strawberry animate-gentle-float pointer-events-none absolute top-16 left-[12%] hidden h-4 w-4 rounded-full sm:block" aria-hidden />
+        <span className="bg-forest animate-gentle-float pointer-events-none absolute top-24 right-[14%] hidden h-5 w-5 rounded-full sm:block [animation-delay:1.4s]" aria-hidden />
         <span className="bg-strawberry animate-gentle-float pointer-events-none absolute bottom-24 left-[20%] hidden h-3 w-3 rounded-full md:block [animation-delay:0.7s]" aria-hidden />
         <Section className="relative py-20 text-center lg:py-28">
           <img
             src="/logo-shani.jpeg"
             alt="Les Pépites de Shani"
-            className="ring-honey/60 mx-auto h-24 w-24 rounded-full object-cover ring-4"
+            className="ring-strawberry/40 mx-auto h-24 w-24 rounded-full object-cover ring-4"
           />
-          <h2 className="font-display mt-8 text-4xl leading-tight sm:text-5xl">
+          <h2 className="font-display text-forest mt-8 text-4xl leading-tight sm:text-5xl">
             J'espère que mes chocolats
             <br className="hidden sm:block" /> vous{" "}
-            <span className="text-honey">plairont</span>.
+            <span className="text-strawberry">plairont</span>.
           </h2>
-          <p className="text-cream/85 mx-auto mt-5 max-w-xl text-lg leading-relaxed">
+          <p className="text-cocoa/80 mx-auto mt-5 max-w-xl text-lg leading-relaxed">
             Une envie, une question, une commande pour une occasion ? Je suis
             ouverte à toute discussion. Écrivez-moi, on en parle.
           </p>
           <div className="mt-9 flex flex-wrap justify-center gap-3">
             <a
               href="mailto:bonjour@lespepitesdeshani.fr"
-              className="bg-honey text-cocoa-deep hover:bg-orange-zest hover:text-cream rounded-full px-8 py-3 font-semibold transition-colors"
+              className="bg-forest text-cream hover:bg-olive-deep rounded-full px-8 py-3 font-semibold transition-colors"
             >
               Écrire à Shani
             </a>
             <a
               href="#creations"
-              className="border-cream/40 hover:bg-cream/10 rounded-full border px-8 py-3 font-semibold transition-colors"
+              className="border-cocoa/25 text-cocoa hover:border-cocoa/50 rounded-full border px-8 py-3 font-semibold transition-colors"
             >
               Revoir les recettes
             </a>
           </div>
-          <p className="font-display text-cream/70 mt-12 text-2xl italic">
+          <p className="font-display text-cocoa/60 mt-12 text-2xl italic">
             Amicalement, Shani.
           </p>
         </Section>
       </div>
 
       {/* Footer */}
-      <footer className="border-cocoa/10 bg-cream border-t">
+      <footer className="border-cocoa/10 bg-white border-t">
         <div className="text-cocoa/60 mx-auto flex w-full max-w-6xl flex-col items-center justify-between gap-3 px-6 py-8 text-sm sm:flex-row sm:px-8">
           <span className="font-display text-forest text-base">
             Les Pépites de Shani — Atelier chocolaté
