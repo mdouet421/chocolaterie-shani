@@ -15,9 +15,9 @@ const NAV = [
 const CREATIONS = [
   {
     name: "Amandettes",
-    border: "border-blush",
-    chip: "bg-blush text-cocoa-deep",
-    title: "text-blush",
+    border: "border-strawberry",
+    chip: "bg-strawberry text-cream",
+    title: "text-strawberry",
     img: "https://images.unsplash.com/photo-1508061253366-f7da158b6d46?auto=format&fit=crop&w=1000&q=80",
     alt: "Amandes torréfiées enrobées de chocolat noir",
     desc: "Des amandes torréfiées, trempées une à une dans un chocolat tempéré, avec une touche de fleur de sel.",
@@ -25,9 +25,9 @@ const CREATIONS = [
   },
   {
     name: "Orangettes",
-    border: "border-strawberry",
-    chip: "bg-strawberry text-cream",
-    title: "text-strawberry",
+    border: "border-forest",
+    chip: "bg-forest text-cream",
+    title: "text-forest",
     img: "https://images.unsplash.com/photo-1547514701-42782101795e?auto=format&fit=crop&w=1000&q=80",
     alt: "Lamelles d'orange confite trempées dans du chocolat noir",
     desc: "Des écorces d'orange confites, plongées dans un chocolat noir tempéré, franches et parfumées.",
@@ -35,9 +35,9 @@ const CREATIONS = [
   },
   {
     name: "Pralinettes",
-    border: "border-forest",
-    chip: "bg-forest text-cream",
-    title: "text-forest",
+    border: "border-chocolate",
+    chip: "bg-chocolate text-cream",
+    title: "text-chocolate",
     img: "https://images.unsplash.com/photo-1481391319762-47dff72954d9?auto=format&fit=crop&w=1000&q=80",
     alt: "Bouchées de praliné dans une coque de chocolat au lait",
     desc: "Un praliné maison de noisettes et d'amandes, blotti dans une fine coque de chocolat au lait.",
