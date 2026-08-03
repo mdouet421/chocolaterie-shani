@@ -128,15 +128,18 @@ function Section({
 function HomePage() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [formOpen, setFormOpen] = useState(false);
+  const [sent, setSent] = useState(false);
   const [form, setForm] = useState({ email: "", objet: "", contenu: "" });
 
   const handleSend = (e: FormEvent) => {
     e.preventDefault();
-    const subject = encodeURIComponent(form.objet);
-    const body = encodeURIComponent(
-      `${form.contenu}\n\nRépondre à : ${form.email}`,
-    );
-    window.location.href = `mailto:bonjour@lespepitesdeshani.fr?subject=${subject}&body=${body}`;
+    console.log("Nouveau message à envoyer :", {
+      to: "bonjour@lespepitesdeshani.fr",
+      replyTo: form.email,
+      objet: form.objet,
+      contenu: form.contenu,
+    });
+    setSent(true);
   };
   return (
     <div className="bg-background text-foreground min-h-dvh">
@@ -457,6 +460,16 @@ function HomePage() {
           <div
             className={`overflow-hidden transition-all duration-500 ease-out ${formOpen ? "max-h-[40rem] opacity-100" : "max-h-0 opacity-0"}`}
           >
+            {sent ? (
+              <div className="border-cocoa/10 mx-auto mt-8 max-w-xl rounded-3xl border bg-white p-8 text-center shadow-[0_30px_60px_-30px_rgba(60,40,20,0.35)]">
+                <p className="font-display text-forest text-2xl">
+                  Merci, votre message est bien noté !
+                </p>
+                <p className="text-cocoa/70 mt-3">
+                  Je vous répondrai avec plaisir dès que possible.
+                </p>
+              </div>
+            ) : (
             <form
               onSubmit={handleSend}
               className="border-cocoa/10 mx-auto mt-8 max-w-xl space-y-4 rounded-3xl border bg-white p-6 text-left shadow-[0_30px_60px_-30px_rgba(60,40,20,0.35)] sm:p-8"
@@ -525,6 +538,7 @@ function HomePage() {
                 Envoyer le message
               </button>
             </form>
+            )}
           </div>
 
           <p className="font-display text-strawberry mt-12 text-2xl italic">
