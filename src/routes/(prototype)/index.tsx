@@ -130,9 +130,25 @@ function HomePage() {
   const [formOpen, setFormOpen] = useState(false);
   const [sent, setSent] = useState(false);
   const [form, setForm] = useState({ email: "", objet: "", contenu: "" });
+  const [errors, setErrors] = useState({ email: "", objet: "", contenu: "" });
 
   const handleSend = (e: FormEvent) => {
     e.preventDefault();
+    const next = {
+      email: !form.email.trim()
+        ? "J'ai besoin de votre e-mail pour vous répondre."
+        : !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email.trim())
+          ? "Cet e-mail semble incomplet, pouvez-vous le vérifier ?"
+          : "",
+      objet: !form.objet.trim()
+        ? "Donnez un petit objet à votre message."
+        : "",
+      contenu: !form.contenu.trim()
+        ? "Dites-moi quelques mots avant d'envoyer."
+        : "",
+    };
+    setErrors(next);
+    if (next.email || next.objet || next.contenu) return;
     console.log("Nouveau message à envoyer :", {
       to: "bonjour@lespepitesdeshani.fr",
       replyTo: form.email,
@@ -471,6 +487,7 @@ function HomePage() {
               </div>
             ) : (
             <form
+              noValidate
               onSubmit={handleSend}
               className="border-cocoa/10 mx-auto mt-8 max-w-xl space-y-4 rounded-3xl border bg-white p-6 text-left shadow-[0_30px_60px_-30px_rgba(60,40,20,0.35)] sm:p-8"
             >
@@ -484,14 +501,19 @@ function HomePage() {
                 <input
                   id="email"
                   type="email"
-                  required
                   value={form.email}
-                  onChange={(e) =>
-                    setForm((f) => ({ ...f, email: e.target.value }))
-                  }
+                  onChange={(e) => {
+                    setForm((f) => ({ ...f, email: e.target.value }));
+                    setErrors((x) => ({ ...x, email: "" }));
+                  }}
                   placeholder="prenom@exemple.fr"
-                  className="border-cocoa/15 focus:border-forest focus:ring-forest/20 w-full rounded-2xl border bg-white px-4 py-3 outline-none transition focus:ring-4"
+                  className={`w-full rounded-2xl border bg-white px-4 py-3 outline-none transition focus:ring-4 ${errors.email ? "border-strawberry focus:border-strawberry focus:ring-strawberry/20" : "border-cocoa/15 focus:border-forest focus:ring-forest/20"}`}
                 />
+                {errors.email && (
+                  <p className="text-strawberry mt-1.5 text-sm">
+                    {errors.email}
+                  </p>
+                )}
               </div>
               <div>
                 <label
@@ -503,14 +525,19 @@ function HomePage() {
                 <input
                   id="objet"
                   type="text"
-                  required
                   value={form.objet}
-                  onChange={(e) =>
-                    setForm((f) => ({ ...f, objet: e.target.value }))
-                  }
+                  onChange={(e) => {
+                    setForm((f) => ({ ...f, objet: e.target.value }));
+                    setErrors((x) => ({ ...x, objet: "" }));
+                  }}
                   placeholder="Une commande pour Noël…"
-                  className="border-cocoa/15 focus:border-forest focus:ring-forest/20 w-full rounded-2xl border bg-white px-4 py-3 outline-none transition focus:ring-4"
+                  className={`w-full rounded-2xl border bg-white px-4 py-3 outline-none transition focus:ring-4 ${errors.objet ? "border-strawberry focus:border-strawberry focus:ring-strawberry/20" : "border-cocoa/15 focus:border-forest focus:ring-forest/20"}`}
                 />
+                {errors.objet && (
+                  <p className="text-strawberry mt-1.5 text-sm">
+                    {errors.objet}
+                  </p>
+                )}
               </div>
               <div>
                 <label
@@ -521,15 +548,20 @@ function HomePage() {
                 </label>
                 <textarea
                   id="contenu"
-                  required
                   rows={4}
                   value={form.contenu}
-                  onChange={(e) =>
-                    setForm((f) => ({ ...f, contenu: e.target.value }))
-                  }
+                  onChange={(e) => {
+                    setForm((f) => ({ ...f, contenu: e.target.value }));
+                    setErrors((x) => ({ ...x, contenu: "" }));
+                  }}
                   placeholder="Dites-moi tout…"
-                  className="border-cocoa/15 focus:border-forest focus:ring-forest/20 w-full resize-none rounded-2xl border bg-white px-4 py-3 outline-none transition focus:ring-4"
+                  className={`w-full resize-none rounded-2xl border bg-white px-4 py-3 outline-none transition focus:ring-4 ${errors.contenu ? "border-strawberry focus:border-strawberry focus:ring-strawberry/20" : "border-cocoa/15 focus:border-forest focus:ring-forest/20"}`}
                 />
+                {errors.contenu && (
+                  <p className="text-strawberry mt-1.5 text-sm">
+                    {errors.contenu}
+                  </p>
+                )}
               </div>
               <button
                 type="submit"
