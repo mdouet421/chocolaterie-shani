@@ -32,10 +32,10 @@ html {
   --color-cocoa: oklch(0.37 0.06 55);
   --color-cocoa-deep: oklch(0.27 0.05 52);
   --color-praline: oklch(0.6 0.11 62);
-  --color-orange-zest: oklch(0.72 0.185 52);
-  --color-honey: oklch(0.82 0.15 78);
-  --color-strawberry: oklch(0.72 0.15 18);
-  --color-blush: oklch(0.85 0.09 18);
+  --color-orange-zest: oklch(0.66 0.15 12);
+  --color-honey: oklch(0.86 0.08 14);
+  --color-strawberry: oklch(0.66 0.15 12);
+  --color-blush: oklch(0.86 0.08 14);
 
   --color-neutral-50: oklch(0.985 0 0);
   --color-neutral-100: oklch(0.967 0.001 286.375);
