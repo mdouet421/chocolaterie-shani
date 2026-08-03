@@ -14,11 +14,19 @@ const NAV = [
 
 const VALUES = ["Bio", "Éthique", "Fait main", "Édition de Noël", "Tempéré maison"];
 
+const VALUE_STYLES = [
+  "bg-leaf/30 text-forest",
+  "bg-orange-zest/25 text-orange-zest",
+  "bg-honey/40 text-cocoa-deep",
+  "bg-strawberry/25 text-strawberry",
+  "bg-olive-deep text-cream",
+];
+
 const CREATIONS = [
   {
     name: "Amandettes",
-    tint: "bg-praline/15",
-    accent: "text-praline",
+    card: "bg-honey/25 border-honey/50",
+    chip: "bg-honey text-cocoa-deep",
     img: "https://images.unsplash.com/photo-1508061253366-f7da158b6d46?auto=format&fit=crop&w=1000&q=80",
     alt: "Amandes torréfiées enrobées de chocolat noir",
     desc: "Des amandes torréfiées, trempées une à une dans un chocolat tempéré, avec une touche de fleur de sel.",
@@ -26,8 +34,8 @@ const CREATIONS = [
   },
   {
     name: "Orangettes",
-    tint: "bg-orange-zest/15",
-    accent: "text-orange-zest",
+    card: "bg-orange-zest/20 border-orange-zest/50",
+    chip: "bg-orange-zest text-cream",
     img: "https://images.unsplash.com/photo-1547514701-42782101795e?auto=format&fit=crop&w=1000&q=80",
     alt: "Lamelles d'orange confite trempées dans du chocolat noir",
     desc: "Des écorces d'orange confites, plongées dans un chocolat noir tempéré, franches et parfumées.",
@@ -35,8 +43,8 @@ const CREATIONS = [
   },
   {
     name: "Pralinettes",
-    tint: "bg-olive/15",
-    accent: "text-olive-deep",
+    card: "bg-leaf/25 border-leaf/50",
+    chip: "bg-olive-deep text-cream",
     img: "https://images.unsplash.com/photo-1526081347589-7fa3cb680983?auto=format&fit=crop&w=1000&q=80",
     alt: "Bouchées de praliné dans une coque de chocolat au lait",
     desc: "Un praliné maison de noisettes et d'amandes, blotti dans une fine coque de chocolat au lait.",
@@ -49,16 +57,28 @@ const SOURCING = [
     title: "Le chocolat",
     from: "Kaoka",
     body: "Un cacao cultivé dans le respect de l'environnement et des producteurs, tracé jusqu'à la fève.",
+    card: "bg-cocoa text-cream",
+    dot: "bg-honey",
+    fromColor: "text-honey",
+    bodyColor: "text-cream/80",
   },
   {
     title: "Amandes & noisettes",
     from: "petits producteurs",
     body: "Choisies avec soin auprès de filières bio. La sélection s'affine au fil des rencontres.",
+    card: "bg-honey/30 text-cocoa-deep",
+    dot: "bg-orange-zest",
+    fromColor: "text-orange-zest",
+    bodyColor: "text-cocoa/80",
   },
   {
     title: "Les oranges bio",
     from: "au marché",
     body: "Cueillies chez le maraîcher du coin, confites patiemment avant leur bain de chocolat.",
+    card: "bg-orange-zest/25 text-cocoa-deep",
+    dot: "bg-strawberry",
+    fromColor: "text-strawberry",
+    bodyColor: "text-cocoa/80",
   },
 ];
 
@@ -151,22 +171,40 @@ function HomePage() {
       {/* Hero */}
       <div id="top" className="relative overflow-hidden">
         <div
-          className="bg-sage/30 pointer-events-none absolute -top-32 -right-24 h-96 w-96 rounded-full blur-3xl"
+          className="bg-leaf/40 pointer-events-none absolute -top-32 -right-24 h-96 w-96 rounded-full blur-3xl"
           aria-hidden
         />
         <div
-          className="bg-blush/40 pointer-events-none absolute top-40 -left-24 h-72 w-72 rounded-full blur-3xl"
+          className="bg-honey/50 pointer-events-none absolute top-52 -left-28 h-80 w-80 rounded-full blur-3xl"
           aria-hidden
         />
+        <div
+          className="bg-blush/50 pointer-events-none absolute -bottom-20 right-1/3 h-72 w-72 rounded-full blur-3xl"
+          aria-hidden
+        />
+        {/* Confetti pépites */}
+        <span className="bg-orange-zest animate-gentle-float pointer-events-none absolute top-24 left-[8%] hidden h-4 w-4 rounded-full sm:block" aria-hidden />
+        <span className="bg-leaf animate-gentle-float pointer-events-none absolute top-[45%] left-[3%] hidden h-6 w-6 rounded-full lg:block [animation-delay:1.5s]" aria-hidden />
+        <span className="bg-strawberry animate-gentle-float pointer-events-none absolute top-16 right-[12%] hidden h-5 w-5 rounded-full sm:block [animation-delay:0.8s]" aria-hidden />
+        <span className="bg-honey animate-gentle-float pointer-events-none absolute bottom-24 left-[15%] hidden h-3 w-3 rounded-full md:block [animation-delay:2.2s]" aria-hidden />
         <Section className="relative grid items-center gap-12 pt-16 pb-20 lg:grid-cols-[1.1fr_0.9fr] lg:pt-24 lg:pb-28">
           <div className="max-w-xl">
-            <span className="border-olive/40 text-olive-deep inline-flex items-center gap-2 rounded-full border px-3 py-1 text-xs font-semibold tracking-wide uppercase">
+            <span className="bg-leaf/30 border-olive/40 text-olive-deep inline-flex items-center gap-2 rounded-full border px-3 py-1 text-xs font-semibold tracking-wide uppercase">
+              <span className="bg-orange-zest h-2 w-2 rounded-full" aria-hidden />
               Atelier chocolaté · fait à la main
             </span>
             <h1 className="font-display text-forest mt-6 text-5xl leading-[1.05] sm:text-6xl lg:text-7xl">
               De petits chocolats,
               <br />
-              faits avec le cœur.
+              faits avec le{" "}
+              <span className="relative inline-block text-orange-zest">
+                cœur
+                <span
+                  className="bg-honey/60 absolute -bottom-1 left-0 h-3 w-full -rotate-1 rounded-full"
+                  aria-hidden
+                />
+              </span>
+              .
             </h1>
             <p className="text-cocoa/80 mt-6 text-lg leading-relaxed">
               Trois recettes, choisies avec soin. Du cacao éthique, des fruits
@@ -190,24 +228,33 @@ function HomePage() {
           </div>
 
           <div className="relative mx-auto w-full max-w-md">
-            <div className="bg-sage/25 absolute inset-0 -rotate-6 rounded-[2.5rem]" aria-hidden />
+            <div className="bg-leaf/30 absolute inset-0 -rotate-6 rounded-[2.5rem]" aria-hidden />
+            <div className="bg-honey/40 absolute inset-0 rotate-3 rounded-[2.5rem]" aria-hidden />
             <div className="border-cocoa/10 bg-cream relative rounded-[2.5rem] border p-6 shadow-[0_30px_60px_-30px_rgba(60,40,20,0.35)]">
               <img
                 src="/logo-shani.jpeg"
                 alt="Le portrait illustré de Shani, cheveux verts et béret de chef"
                 className="w-full rounded-[2rem] object-cover"
               />
+              <span className="bg-orange-zest text-cream animate-gentle-float absolute -top-4 -right-4 flex h-16 w-16 rotate-6 items-center justify-center rounded-full text-center text-xs font-bold leading-tight shadow-lg">
+                100%
+                <br />
+                maison
+              </span>
+              <span className="bg-strawberry text-cream absolute -bottom-3 -left-3 rounded-full px-4 py-2 text-sm font-semibold shadow-lg [animation-delay:1s]">
+                Miam !
+              </span>
             </div>
           </div>
         </Section>
 
-        {/* Values marquee */}
-        <div className="border-cocoa/10 border-y bg-olive-deep">
-          <div className="mx-auto flex w-full max-w-6xl flex-wrap items-center justify-center gap-x-8 gap-y-2 px-6 py-4 sm:px-8">
-            {VALUES.map((v) => (
+        {/* Values pills */}
+        <div className="border-cocoa/10 bg-cream-deep border-y">
+          <div className="mx-auto flex w-full max-w-6xl flex-wrap items-center justify-center gap-3 px-6 py-6 sm:px-8">
+            {VALUES.map((v, i) => (
               <span
                 key={v}
-                className="text-cream/90 text-sm font-medium tracking-wide"
+                className={`rounded-full px-4 py-1.5 text-sm font-semibold ${VALUE_STYLES[i % VALUE_STYLES.length]}`}
               >
                 {v}
               </span>
@@ -217,14 +264,16 @@ function HomePage() {
       </div>
 
       {/* Story */}
-      <Section id="histoire" className="py-20 lg:py-28">
-        <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
+      <Section id="histoire" className="relative py-20 lg:py-28">
+        <span className="bg-blush/40 pointer-events-none absolute top-10 right-0 -z-0 h-64 w-64 rounded-full blur-3xl" aria-hidden />
+        <div className="relative grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
           <div className="lg:sticky lg:top-28">
-            <p className="text-olive-deep text-sm font-semibold tracking-widest uppercase">
+            <p className="bg-leaf/25 text-forest inline-block rounded-full px-3 py-1 text-sm font-semibold tracking-widest uppercase">
               L'histoire
             </p>
-            <h2 className="font-display text-forest mt-3 text-4xl leading-tight sm:text-5xl">
-              Je m'appelle Shani, et j'aime faire plaisir.
+            <h2 className="font-display text-forest mt-4 text-4xl leading-tight sm:text-5xl">
+              Je m'appelle Shani, et j'aime faire{" "}
+              <span className="text-strawberry">plaisir</span>.
             </h2>
           </div>
           <div className="text-cocoa/85 space-y-5 text-lg leading-relaxed">
@@ -239,7 +288,7 @@ function HomePage() {
               l'auto-entrepreneuriat, gérer les achats, les ventes… tout ce
               nouveau monde, doucement mais sûrement.
             </p>
-            <blockquote className="border-olive/50 text-forest my-8 border-l-2 pl-5 font-display text-2xl leading-snug italic">
+            <blockquote className="bg-honey/35 text-forest my-8 rounded-3xl px-7 py-6 font-display text-2xl leading-snug italic">
               « Je préfère le bouche à oreille aux grandes stratégies :
               commencer sans pression, et garder ce côté passion. »
             </blockquote>
@@ -253,14 +302,15 @@ function HomePage() {
       </Section>
 
       {/* Creations */}
-      <div className="bg-cream-deep">
+      <div className="bg-sage/25">
         <Section id="creations" className="py-20 lg:py-28">
           <div className="max-w-2xl">
-            <p className="text-olive-deep text-sm font-semibold tracking-widest uppercase">
+            <p className="bg-orange-zest/20 text-orange-zest inline-block rounded-full px-3 py-1 text-sm font-semibold tracking-widest uppercase">
               Les créations
             </p>
-            <h2 className="font-display text-forest mt-3 text-4xl leading-tight sm:text-5xl">
-              J'ouvre avec trois recettes.
+            <h2 className="font-display text-forest mt-4 text-4xl leading-tight sm:text-5xl">
+              J'ouvre avec{" "}
+              <span className="text-orange-zest">trois recettes</span>.
             </h2>
             <p className="text-cocoa/75 mt-4 text-lg">
               Juste trois, mais faites avec attention. Chaque bouchée est
@@ -272,27 +322,27 @@ function HomePage() {
             {CREATIONS.map((c, i) => (
               <article
                 key={c.name}
-                className="border-cocoa/10 bg-cream group flex flex-col overflow-hidden rounded-3xl border"
+                className={`group flex flex-col overflow-hidden rounded-3xl border transition-transform duration-500 ease-out hover:-translate-y-2 ${c.card}`}
               >
-                <ImageFrame
-                  src={c.img}
-                  alt={c.alt}
-                  tint={c.tint}
-                  className="aspect-[4/5]"
-                />
+                <div className="relative">
+                  <ImageFrame
+                    src={c.img}
+                    alt={c.alt}
+                    tint="bg-cream-deep"
+                    className="aspect-[4/5]"
+                  />
+                  <span
+                    className={`absolute top-4 left-4 flex h-9 w-9 items-center justify-center rounded-full text-sm font-bold shadow ${c.chip}`}
+                  >
+                    0{i + 1}
+                  </span>
+                </div>
                 <div className="flex flex-1 flex-col p-6">
-                  <div className="flex items-baseline justify-between gap-3">
-                    <h3 className="font-display text-forest text-2xl">
-                      {c.name}
-                    </h3>
-                    <span className={`text-sm font-semibold ${c.accent}`}>
-                      0{i + 1}
-                    </span>
-                  </div>
+                  <h3 className="font-display text-forest text-2xl">{c.name}</h3>
                   <p className="text-cocoa/80 mt-3 flex-1 leading-relaxed">
                     {c.desc}
                   </p>
-                  <p className="text-cocoa/50 mt-5 text-xs font-medium tracking-wide uppercase">
+                  <p className="text-cocoa/60 mt-5 text-xs font-semibold tracking-wide uppercase">
                     {c.note}
                   </p>
                 </div>
@@ -306,11 +356,12 @@ function HomePage() {
       <Section id="sourcing" className="py-20 lg:py-28">
         <div className="grid gap-12 lg:grid-cols-[1fr_1fr] lg:items-center">
           <div>
-            <p className="text-olive-deep text-sm font-semibold tracking-widest uppercase">
+            <p className="bg-honey/40 text-cocoa-deep inline-block rounded-full px-3 py-1 text-sm font-semibold tracking-widest uppercase">
               Le sourcing
             </p>
-            <h2 className="font-display text-forest mt-3 text-4xl leading-tight sm:text-5xl">
-              Des produits bio, choisis avec le cœur.
+            <h2 className="font-display text-forest mt-4 text-4xl leading-tight sm:text-5xl">
+              Des produits bio, choisis avec le{" "}
+              <span className="text-strawberry">cœur</span>.
             </h2>
             <p className="text-cocoa/80 mt-5 text-lg leading-relaxed">
               Je crois qu'un bon chocolat commence par de bons ingrédients, et
@@ -322,15 +373,15 @@ function HomePage() {
             {SOURCING.map((s) => (
               <div
                 key={s.title}
-                className="border-cocoa/10 bg-cream flex items-start gap-5 rounded-2xl border p-6"
+                className={`flex items-start gap-5 rounded-3xl p-6 ${s.card}`}
               >
-                <span className="bg-sage/40 mt-1 h-3 w-3 shrink-0 rounded-full" aria-hidden />
+                <span className={`mt-2 h-3.5 w-3.5 shrink-0 rounded-full ${s.dot}`} aria-hidden />
                 <div>
-                  <h3 className="font-display text-forest text-xl">
+                  <h3 className="font-display text-xl">
                     {s.title}{" "}
-                    <span className="text-olive-deep">· {s.from}</span>
+                    <span className={s.fromColor}>· {s.from}</span>
                   </h3>
-                  <p className="text-cocoa/75 mt-2 leading-relaxed">{s.body}</p>
+                  <p className={`mt-2 leading-relaxed ${s.bodyColor}`}>{s.body}</p>
                 </div>
               </div>
             ))}
@@ -339,16 +390,22 @@ function HomePage() {
       </Section>
 
       {/* Contact */}
-      <div id="contact" className="bg-forest text-cream">
-        <Section className="py-20 text-center lg:py-28">
+      <div id="contact" className="bg-forest text-cream relative overflow-hidden">
+        <span className="bg-olive-deep/60 pointer-events-none absolute -top-16 -left-10 h-72 w-72 rounded-full blur-3xl" aria-hidden />
+        <span className="bg-honey/30 pointer-events-none absolute -bottom-20 -right-10 h-80 w-80 rounded-full blur-3xl" aria-hidden />
+        <span className="bg-honey animate-gentle-float pointer-events-none absolute top-16 left-[12%] hidden h-4 w-4 rounded-full sm:block" aria-hidden />
+        <span className="bg-orange-zest animate-gentle-float pointer-events-none absolute top-24 right-[14%] hidden h-5 w-5 rounded-full sm:block [animation-delay:1.4s]" aria-hidden />
+        <span className="bg-strawberry animate-gentle-float pointer-events-none absolute bottom-24 left-[20%] hidden h-3 w-3 rounded-full md:block [animation-delay:0.7s]" aria-hidden />
+        <Section className="relative py-20 text-center lg:py-28">
           <img
             src="/logo-shani.jpeg"
             alt="Les Pépites de Shani"
-            className="border-cream/20 mx-auto h-24 w-24 rounded-full border-2 object-cover"
+            className="ring-honey/60 mx-auto h-24 w-24 rounded-full object-cover ring-4"
           />
           <h2 className="font-display mt-8 text-4xl leading-tight sm:text-5xl">
             J'espère que mes chocolats
-            <br className="hidden sm:block" /> vous plairont.
+            <br className="hidden sm:block" /> vous{" "}
+            <span className="text-honey">plairont</span>.
           </h2>
           <p className="text-cream/85 mx-auto mt-5 max-w-xl text-lg leading-relaxed">
             Une envie, une question, une commande pour une occasion ? Je suis
@@ -357,7 +414,7 @@ function HomePage() {
           <div className="mt-9 flex flex-wrap justify-center gap-3">
             <a
               href="mailto:bonjour@lespepitesdeshani.fr"
-              className="bg-cream text-forest hover:bg-cream-deep rounded-full px-8 py-3 font-semibold transition-colors"
+              className="bg-honey text-cocoa-deep hover:bg-orange-zest hover:text-cream rounded-full px-8 py-3 font-semibold transition-colors"
             >
               Écrire à Shani
             </a>
