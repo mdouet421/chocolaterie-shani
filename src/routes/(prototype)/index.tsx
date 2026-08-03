@@ -192,13 +192,13 @@ function HomePage() {
             <div className="mt-8 flex flex-wrap items-center gap-3">
               <a
                 href="#creations"
-                className="bg-cocoa-deep hover:bg-cocoa rounded-full px-7 py-3 font-semibold text-cream transition-colors"
+                className="bg-forest hover:bg-olive-deep rounded-full px-7 py-3 font-semibold text-cream transition-colors"
               >
                 Découvrir les créations
               </a>
               <a
                 href="#histoire"
-                className="border-cocoa/25 text-cocoa hover:border-cocoa/50 rounded-full border px-7 py-3 font-semibold transition-colors"
+                className="border-forest text-forest hover:bg-forest/10 rounded-full border px-7 py-3 font-semibold transition-colors"
               >
                 Rencontrer Shani
               </a>
