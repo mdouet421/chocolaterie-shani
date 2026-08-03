@@ -415,7 +415,7 @@ function HomePage() {
       </div>
 
       {/* Contact */}
-      <div id="contact" className="bg-cream text-cocoa-deep relative overflow-hidden">
+      <div id="contact" className="bg-blush/40 text-cocoa-deep relative overflow-hidden">
         <span className="bg-strawberry/20 pointer-events-none absolute -bottom-20 -right-10 h-80 w-80 rounded-full blur-3xl" aria-hidden />
         <Section className="relative py-20 text-center lg:py-28">
           <img
