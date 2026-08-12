@@ -322,11 +322,11 @@ function HomePage() {
           </div>
 
           <div className="relative mx-auto w-full max-w-md order-first lg:order-none">
-            <div className="relative aspect-square w-full overflow-hidden rounded-full">
+            <div className="relative aspect-square w-full">
               <img
-                src="/logo-shani.jpeg"
+                src="/logo-shani-transparent.png"
                 alt="Le portrait illustré de Shani, cheveux verts et béret de chef"
-                className="h-full w-full scale-[1.08] object-cover"
+                className="h-full w-full object-contain"
               />
               <span className="bg-orange-zest text-cream animate-gentle-float absolute -top-4 -right-4 flex h-16 w-16 rotate-6 items-center justify-center rounded-full text-center text-xs font-bold leading-tight shadow-lg">
                 100%
@@ -471,9 +471,9 @@ function HomePage() {
       <div id="contact" className="bg-blush/40 text-cocoa-deep relative overflow-hidden">
         <Section className="relative py-20 text-center lg:py-28">
           <img
-            src="/logo-shani.jpeg"
+            src="/logo-shani-transparent.png"
             alt="Les Pépites de Shani"
-            className="mx-auto h-40 w-40 rounded-full object-cover ring-[14px] ring-white"
+            className="mx-auto h-44 w-44 object-contain"
           />
           <h2 className="font-display text-forest mt-8 text-4xl leading-tight sm:text-5xl">
             J'espère que mes chocolats
