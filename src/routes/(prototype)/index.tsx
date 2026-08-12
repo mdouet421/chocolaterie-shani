@@ -326,7 +326,7 @@ function HomePage() {
               <img
                 src="/logo-shani.jpeg"
                 alt="Le portrait illustré de Shani, cheveux verts et béret de chef"
-                className="h-full w-full scale-[1.18] object-cover"
+                className="h-full w-full scale-[1.08] object-cover"
               />
               <span className="bg-orange-zest text-cream animate-gentle-float absolute -top-4 -right-4 flex h-16 w-16 rotate-6 items-center justify-center rounded-full text-center text-xs font-bold leading-tight shadow-lg">
                 100%
