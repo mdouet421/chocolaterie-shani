@@ -322,11 +322,11 @@ function HomePage() {
           </div>
 
           <div className="relative mx-auto w-full max-w-md order-first lg:order-none">
-            <div className="border-cocoa/10 bg-white relative rounded-[2.5rem] border p-6 shadow-[0_30px_60px_-30px_rgba(60,40,20,0.35)]">
+            <div className="relative">
               <img
                 src="/logo-shani.jpeg"
                 alt="Le portrait illustré de Shani, cheveux verts et béret de chef"
-                className="w-full rounded-[2rem] object-cover"
+                className="w-full rounded-[2.5rem] object-cover"
               />
               <span className="bg-orange-zest text-cream animate-gentle-float absolute -top-4 -right-4 flex h-16 w-16 rotate-6 items-center justify-center rounded-full text-center text-xs font-bold leading-tight shadow-lg">
                 100%
