@@ -215,7 +215,7 @@ function HomePage() {
           </nav>
           <a
             href="#contact"
-            className="bg-[#555500] hover:bg-[#54541a] hidden rounded-full px-5 py-2 text-sm font-semibold text-cream transition-colors md:inline-flex"
+            className="bg-[#69681E] hover:bg-[#54541a] hidden rounded-full px-5 py-2 text-sm font-semibold text-cream transition-colors md:inline-flex"
           >
             Me contacter
           </a>
@@ -258,7 +258,7 @@ function HomePage() {
                 <a
                   href="#contact"
                   onClick={() => setMenuOpen(false)}
-                  className="bg-[#555500] hover:bg-[#54541a] mt-2 rounded-full px-5 py-2.5 text-center text-sm font-semibold text-cream transition-colors"
+                  className="bg-[#69681E] hover:bg-[#54541a] mt-2 rounded-full px-5 py-2.5 text-center text-sm font-semibold text-cream transition-colors"
                 >
                   Me contacter
                 </a>
@@ -272,7 +272,7 @@ function HomePage() {
       <div id="top" className="relative overflow-hidden bg-[#B6B766]">
         <Section className="relative grid items-center gap-12 pt-16 pb-20 lg:grid-cols-[1.1fr_0.9fr] lg:pt-24 lg:pb-28">
           <div className="max-w-xl">
-            <span className="bg-[#555500] border-[#989A35] text-[#FFFAD7] inline-flex w-min flex-wrap items-center gap-x-1.5 gap-y-0.5 rounded-full border px-3 py-1 text-xs font-semibold tracking-wide uppercase sm:w-max">
+            <span className="bg-[#69681E] border-[#989A35] text-[#FFFAD7] inline-flex w-min flex-wrap items-center gap-x-1.5 gap-y-0.5 rounded-full border px-3 py-1 text-xs font-semibold tracking-wide uppercase sm:w-max">
               <span className="bg-[#FFFAD7] h-2 w-2 shrink-0 rounded-full" aria-hidden />
               <span className="whitespace-nowrap">Atelier chocolaté</span>
               <span className="hidden sm:inline" aria-hidden>·</span>
@@ -299,7 +299,7 @@ function HomePage() {
             <div className="mt-8 flex flex-wrap items-center gap-3">
               <a
                 href="#creations"
-                className="bg-[#555500] hover:bg-[#54541a] rounded-full px-7 py-3 font-semibold text-cream transition-colors"
+                className="bg-[#69681E] hover:bg-[#54541a] rounded-full px-7 py-3 font-semibold text-cream transition-colors"
               >
                 Découvrir les créations
               </a>
@@ -381,7 +381,7 @@ function HomePage() {
       <div className="bg-[#FFFAD7]">
         <Section id="creations" className="py-20 lg:py-28">
           <div className="max-w-2xl">
-            <p className="bg-[#B6B766]/25 text-[#555500] inline-block rounded-full px-3 py-1 text-sm font-semibold tracking-widest uppercase">
+            <p className="bg-[#B6B766]/25 text-[#69681E] inline-block rounded-full px-3 py-1 text-sm font-semibold tracking-widest uppercase">
               Les créations
             </p>
             <h2 className="font-display text-forest-ink mt-4 text-4xl leading-tight sm:text-5xl">
@@ -500,7 +500,7 @@ function HomePage() {
               type="button"
               onClick={() => setFormOpen((v) => !v)}
               aria-expanded={formOpen}
-              className="bg-[#555500] text-cream hover:bg-[#54541a] rounded-full px-8 py-3 font-semibold transition-colors"
+              className="bg-[#69681E] text-cream hover:bg-[#54541a] rounded-full px-8 py-3 font-semibold transition-colors"
             >
               Écrire à Shani
             </button>
@@ -604,7 +604,7 @@ function HomePage() {
               </div>
               <button
                 type="submit"
-                className="bg-[#555500] text-cream hover:bg-[#54541a] w-full rounded-full px-8 py-3 font-semibold transition-colors"
+                className="bg-[#69681E] text-cream hover:bg-[#54541a] w-full rounded-full px-8 py-3 font-semibold transition-colors"
               >
                 Envoyer le message
               </button>
