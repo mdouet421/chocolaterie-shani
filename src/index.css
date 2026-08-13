@@ -29,6 +29,7 @@ html {
   --color-olive: oklch(0.63 0.12 120);
   --color-olive-deep: oklch(0.52 0.1 120);
   --color-forest: oklch(0.47 0.09 122);
+  --color-forest-ink: #989a35;
   --color-cocoa: oklch(0.28 0 0);
   --color-cocoa-deep: oklch(0.17 0 0);
   --color-praline: oklch(0.45 0 0);

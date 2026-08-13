@@ -27,7 +27,7 @@ const CREATIONS = [
     name: "Orangettes",
     border: "border-forest",
     chip: "bg-forest text-cream",
-    title: "text-forest",
+    title: "text-forest-ink",
     img: "https://images.unsplash.com/photo-1547514701-42782101795e?auto=format&fit=crop&w=1000&q=80",
     alt: "Lamelles d'orange confite trempées dans du chocolat noir",
     desc: "Des écorces d'orange confites, plongées dans un chocolat noir tempéré, franches et parfumées.",
@@ -198,7 +198,7 @@ function HomePage() {
               alt="Les Pépites de Shani, atelier chocolaté"
               className="border-cocoa/10 h-11 w-11 rounded-full border object-cover"
             />
-            <span className="font-display text-forest hidden text-lg leading-none sm:block">
+            <span className="font-display text-forest-ink hidden text-lg leading-none sm:block">
               Les Pépites de Shani
             </span>
           </a>
@@ -207,7 +207,7 @@ function HomePage() {
               <a
                 key={n.href}
                 href={n.href}
-                className="text-cocoa/70 hover:text-forest text-sm font-medium transition-colors"
+                className="text-cocoa/70 hover:text-forest-ink text-sm font-medium transition-colors"
               >
                 {n.label}
               </a>
@@ -225,7 +225,7 @@ function HomePage() {
               aria-label="Ouvrir le menu"
               aria-expanded={menuOpen}
               onClick={() => setMenuOpen((v) => !v)}
-              className="border-cocoa/15 text-forest hover:bg-forest/5 relative z-10 inline-flex h-11 w-11 items-center justify-center rounded-full border transition-colors"
+              className="border-cocoa/15 text-forest-ink hover:bg-forest/5 relative z-10 inline-flex h-11 w-11 items-center justify-center rounded-full border transition-colors"
             >
               <span className="relative block h-4 w-5" aria-hidden>
                 <span
@@ -250,7 +250,7 @@ function HomePage() {
                     key={n.href}
                     href={n.href}
                     onClick={() => setMenuOpen(false)}
-                    className="text-cocoa/80 hover:bg-forest/5 hover:text-forest rounded-2xl px-4 py-2.5 text-base font-medium transition-colors"
+                    className="text-cocoa/80 hover:bg-forest/5 hover:text-forest-ink rounded-2xl px-4 py-2.5 text-base font-medium transition-colors"
                   >
                     {n.label}
                   </a>
@@ -278,7 +278,7 @@ function HomePage() {
               <span className="hidden sm:inline" aria-hidden>·</span>
               <span className="whitespace-nowrap">Bio · Éthique · fait main</span>
             </span>
-            <h1 className="font-display text-forest mt-6 text-5xl leading-[1.05] sm:text-6xl lg:text-7xl">
+            <h1 className="font-display text-forest-ink mt-6 text-5xl leading-[1.05] sm:text-6xl lg:text-7xl">
               De petits chocolats,
               <br />
               faits avec le{" "}
@@ -305,7 +305,7 @@ function HomePage() {
               </a>
               <a
                 href="#histoire"
-                className="border-forest text-forest hover:bg-forest/10 rounded-full border px-7 py-3 font-semibold transition-colors"
+                className="border-forest text-forest-ink hover:bg-forest/10 rounded-full border px-7 py-3 font-semibold transition-colors"
               >
                 Rencontrer Shani
               </a>
@@ -343,10 +343,10 @@ function HomePage() {
       <Section id="histoire" className="relative py-20 lg:py-28">
         <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
           <div>
-            <p className="bg-leaf/25 text-forest inline-block rounded-full px-3 py-1 text-sm font-semibold tracking-widest uppercase">
+            <p className="bg-leaf/25 text-forest-ink inline-block rounded-full px-3 py-1 text-sm font-semibold tracking-widest uppercase">
               L'histoire
             </p>
-            <h2 className="font-display text-forest mt-4 text-4xl leading-tight sm:text-5xl">
+            <h2 className="font-display text-forest-ink mt-4 text-4xl leading-tight sm:text-5xl">
               Je m'appelle Shani, et j'aime faire{" "}
               <span className="text-strawberry">plaisir</span>.
             </h2>
@@ -363,7 +363,7 @@ function HomePage() {
               l'auto-entrepreneuriat, gérer les achats, les ventes… tout ce
               nouveau monde, doucement mais sûrement.
             </p>
-            <blockquote className="bg-honey/35 text-forest my-8 rounded-3xl px-7 py-6 font-display text-2xl leading-snug italic">
+            <blockquote className="bg-honey/35 text-forest-ink my-8 rounded-3xl px-7 py-6 font-display text-2xl leading-snug italic">
               « Je préfère le bouche à oreille aux grandes stratégies commerciales :
               commencer sans pression, et garder ce côté passion. »
             </blockquote>
@@ -384,7 +384,7 @@ function HomePage() {
             <p className="bg-orange-zest/20 text-orange-zest inline-block rounded-full px-3 py-1 text-sm font-semibold tracking-widest uppercase">
               Les créations
             </p>
-            <h2 className="font-display text-forest mt-4 text-4xl leading-tight sm:text-5xl">
+            <h2 className="font-display text-forest-ink mt-4 text-4xl leading-tight sm:text-5xl">
               J'ouvre avec{" "}
               <span className="text-orange-zest">trois recettes</span>.
             </h2>
@@ -436,7 +436,7 @@ function HomePage() {
             <p className="bg-[#FFFAD7] text-cocoa-deep inline-block rounded-full px-3 py-1 text-sm font-semibold tracking-widest uppercase">
               Le sourcing
             </p>
-            <h2 className="font-display text-forest mt-4 text-4xl leading-tight sm:text-5xl">
+            <h2 className="font-display text-forest-ink mt-4 text-4xl leading-tight sm:text-5xl">
               Des produits bio, choisis avec le{" "}
               <span className="text-strawberry">cœur</span>.
             </h2>
@@ -475,7 +475,7 @@ function HomePage() {
             alt="Les Pépites de Shani"
             className="mx-auto h-44 w-44 object-contain"
           />
-          <h2 className="font-display text-forest mt-8 text-4xl leading-tight sm:text-5xl">
+          <h2 className="font-display text-forest-ink mt-8 text-4xl leading-tight sm:text-5xl">
             J'espère que mes chocolats
             <br className="hidden sm:block" /> vous{" "}
             <span className="text-strawberry">plairont</span>.
@@ -506,7 +506,7 @@ function HomePage() {
             </button>
             <a
               href="#creations"
-              className="border-forest text-forest hover:bg-forest/10 rounded-full border px-8 py-3 font-semibold transition-colors"
+              className="border-forest text-forest-ink hover:bg-forest/10 rounded-full border px-8 py-3 font-semibold transition-colors"
             >
               Revoir les recettes
             </a>
@@ -517,7 +517,7 @@ function HomePage() {
           >
             {sent ? (
               <div className="border-cocoa/10 mx-auto mt-8 max-w-xl rounded-3xl border bg-white p-8 text-center shadow-[0_30px_60px_-30px_rgba(60,40,20,0.35)]">
-                <p className="font-display text-forest text-2xl">
+                <p className="font-display text-forest-ink text-2xl">
                   Merci, votre message est bien noté !
                 </p>
                 <p className="text-cocoa/70 mt-3">
@@ -621,7 +621,7 @@ function HomePage() {
       {/* Footer */}
       <footer className="border-cocoa/10 bg-white border-t">
         <div className="text-cocoa/60 mx-auto flex w-full max-w-6xl flex-col items-center justify-between gap-3 px-6 py-8 text-sm sm:flex-row sm:px-8">
-          <span className="font-display text-forest text-base">
+          <span className="font-display text-forest-ink text-base">
             Les Pépites de Shani — Atelier chocolaté
           </span>
           <span>Bio · Éthique · Fait main avec amour</span>
