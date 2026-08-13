@@ -282,7 +282,7 @@ function HomePage() {
               De petits chocolats,
               <br />
               faits avec le{" "}
-              <span className="relative inline-block text-orange-zest">
+              <span className="relative inline-block text-[#FFFAD7]">
                 cœur
                 <span
                   className="bg-honey/60 absolute -bottom-1 left-0 h-3 w-full -rotate-1 rounded-full"
@@ -328,7 +328,7 @@ function HomePage() {
                 alt="Le portrait illustré de Shani, cheveux verts et béret de chef"
                 className="h-full w-full object-contain"
               />
-              <span className="bg-orange-zest text-cream animate-gentle-float absolute top-[8%] right-[8%] flex h-16 w-16 rotate-6 items-center justify-center rounded-full text-center text-xs font-bold leading-tight shadow-lg">
+              <span className="bg-[#FFFAD7] text-cocoa-deep animate-gentle-float absolute top-[8%] right-[8%] flex h-16 w-16 rotate-6 items-center justify-center rounded-full text-center text-xs font-bold leading-tight shadow-lg">
                 100%
                 <br />
                 maison
