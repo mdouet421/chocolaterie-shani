@@ -381,7 +381,7 @@ function HomePage() {
       <div className="bg-[#FFFAD7]">
         <Section id="creations" className="py-20 lg:py-28">
           <div className="max-w-2xl">
-            <p className="bg-orange-zest/20 text-orange-zest inline-block rounded-full px-3 py-1 text-sm font-semibold tracking-widest uppercase">
+            <p className="bg-[#B6B766]/25 text-[#69681E] inline-block rounded-full px-3 py-1 text-sm font-semibold tracking-widest uppercase">
               Les créations
             </p>
             <h2 className="font-display text-forest-ink mt-4 text-4xl leading-tight sm:text-5xl">
