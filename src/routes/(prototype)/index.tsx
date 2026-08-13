@@ -193,11 +193,13 @@ function HomePage() {
       <header className="border-cocoa/10 bg-white/70 sticky top-0 z-50 border-b backdrop-blur-xl">
         <div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-4 px-6 py-3 sm:px-8">
           <a href="#top" className="flex items-center gap-3">
-            <img
-              src="/logo-shani.jpeg"
-              alt="Les Pépites de Shani, atelier chocolaté"
-              className="border-cocoa/10 h-11 w-11 rounded-full border object-cover"
-            />
+            <span className="ring-[#B6B766] inline-flex rounded-full p-1 ring-2">
+              <img
+                src="/logo-shani.jpeg"
+                alt="Les Pépites de Shani, atelier chocolaté"
+                className="border-cocoa/10 h-11 w-11 rounded-full border object-cover"
+              />
+            </span>
             <span className="font-display text-forest-ink hidden text-lg leading-none sm:block">
               Les Pépites de Shani
             </span>
