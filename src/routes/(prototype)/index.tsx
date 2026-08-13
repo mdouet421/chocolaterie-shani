@@ -17,7 +17,7 @@ const CREATIONS = [
     name: "Amandettes",
     border: "border-strawberry",
     chip: "bg-strawberry text-cream",
-    title: "text-chocolate",
+    title: "text-strawberry",
     img: "https://images.unsplash.com/photo-1508061253366-f7da158b6d46?auto=format&fit=crop&w=1000&q=80",
     alt: "Amandes torréfiées enrobées de chocolat noir",
     desc: "Des amandes torréfiées, trempées une à une dans un chocolat tempéré, avec une touche de fleur de sel.",
@@ -70,7 +70,7 @@ const SOURCING = [
     body: "Cueillies chez un maraîcher local au coeur du Cotentin, confites patiemment avant leur bain de chocolat.",
     card: "bg-[#FFFAD7] text-cocoa-deep",
     dot: "bg-[#FFFAD7]",
-    fromColor: "text-chocolate",
+    fromColor: "text-strawberry",
     bodyColor: "text-cocoa/80",
   },
 ];
@@ -313,7 +313,7 @@ function HomePage() {
                 href={INSTAGRAM_URL}
                 target="_blank"
                 rel="noreferrer"
-                className="text-cocoa/70 hover:text-chocolate inline-flex items-center gap-2 font-semibold transition-colors"
+                className="text-cocoa/70 hover:text-strawberry inline-flex items-center gap-2 font-semibold transition-colors"
               >
                 <InstagramIcon className="h-5 w-5" />
                 Suivre sur Instagram
@@ -348,7 +348,7 @@ function HomePage() {
             </p>
             <h2 className="font-display text-forest-ink mt-4 text-4xl leading-tight sm:text-5xl">
               Je m'appelle Shani, et j'aime faire{" "}
-              <span className="text-chocolate">plaisir</span>.
+              <span className="text-strawberry">plaisir</span>.
             </h2>
           </div>
           <div className="text-cocoa/85 space-y-5 text-lg leading-relaxed">
@@ -438,7 +438,7 @@ function HomePage() {
             </p>
             <h2 className="font-display text-forest-ink mt-4 text-4xl leading-tight sm:text-5xl">
               Des produits bio, choisis avec le{" "}
-              <span className="text-chocolate">cœur</span>.
+              <span className="text-strawberry">cœur</span>.
             </h2>
             <p className="text-cocoa/80 mt-5 text-lg leading-relaxed">
               Je crois qu'un bon chocolat commence par de bons ingrédients, et
@@ -478,7 +478,7 @@ function HomePage() {
           <h2 className="font-display text-forest-ink mt-8 text-4xl leading-tight sm:text-5xl">
             J'espère que mes chocolats
             <br className="hidden sm:block" /> vous{" "}
-            <span className="text-chocolate">plairont</span>.
+            <span className="text-strawberry">plairont</span>.
           </h2>
           <p className="text-cocoa/80 mx-auto mt-5 max-w-xl text-lg leading-relaxed">
             Une envie, une question, une commande pour une occasion ? Je suis
@@ -489,7 +489,7 @@ function HomePage() {
               href={INSTAGRAM_URL}
               target="_blank"
               rel="noreferrer"
-              className="text-cocoa/70 hover:text-chocolate inline-flex items-center gap-2 font-semibold transition-colors"
+              className="text-cocoa/70 hover:text-strawberry inline-flex items-center gap-2 font-semibold transition-colors"
             >
               <InstagramIcon className="h-5 w-5" />
               Me suivre sur Instagram
@@ -549,7 +549,7 @@ function HomePage() {
                   className={`w-full rounded-2xl border bg-white px-4 py-3 outline-none transition focus:ring-4 ${errors.email ? "border-strawberry focus:border-strawberry focus:ring-strawberry/20" : "border-cocoa/15 focus:border-forest focus:ring-forest/20"}`}
                 />
                 {errors.email && (
-                  <p className="text-chocolate mt-1.5 text-sm">
+                  <p className="text-strawberry mt-1.5 text-sm">
                     {errors.email}
                   </p>
                 )}
@@ -573,7 +573,7 @@ function HomePage() {
                   className={`w-full rounded-2xl border bg-white px-4 py-3 outline-none transition focus:ring-4 ${errors.objet ? "border-strawberry focus:border-strawberry focus:ring-strawberry/20" : "border-cocoa/15 focus:border-forest focus:ring-forest/20"}`}
                 />
                 {errors.objet && (
-                  <p className="text-chocolate mt-1.5 text-sm">
+                  <p className="text-strawberry mt-1.5 text-sm">
                     {errors.objet}
                   </p>
                 )}
@@ -597,7 +597,7 @@ function HomePage() {
                   className={`w-full resize-none rounded-2xl border bg-white px-4 py-3 outline-none transition focus:ring-4 ${errors.contenu ? "border-strawberry focus:border-strawberry focus:ring-strawberry/20" : "border-cocoa/15 focus:border-forest focus:ring-forest/20"}`}
                 />
                 {errors.contenu && (
-                  <p className="text-chocolate mt-1.5 text-sm">
+                  <p className="text-strawberry mt-1.5 text-sm">
                     {errors.contenu}
                   </p>
                 )}
@@ -612,7 +612,7 @@ function HomePage() {
             )}
           </div>
 
-          <p className="font-display text-chocolate mt-12 text-2xl italic">
+          <p className="font-display text-strawberry mt-12 text-2xl italic">
             Amicalement, Shani.
           </p>
         </Section>
