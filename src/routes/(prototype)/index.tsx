@@ -328,10 +328,15 @@ function HomePage() {
 
           <div className="relative mx-auto w-full max-w-md order-first lg:order-none">
             <div className="relative aspect-square w-full">
+              <span
+                aria-hidden
+                className="absolute left-1/2 top-1/2 aspect-square w-[82%] -translate-x-1/2 -translate-y-1/2 rounded-full"
+                style={{ border: "2px solid #B6B766" }}
+              />
               <img
                 src="/logo-shani-transparent.png"
                 alt="Le portrait illustré de Shani, cheveux verts et béret de chef"
-                className="h-full w-full object-contain"
+                className="relative h-full w-full object-contain"
               />
               <span className="bg-[#FFFAD7] text-cocoa-deep animate-gentle-float absolute top-[8%] right-[8%] flex h-16 w-16 rotate-6 items-center justify-center rounded-full text-center text-xs font-bold leading-tight shadow-lg">
                 100%
