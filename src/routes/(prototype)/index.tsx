@@ -272,8 +272,8 @@ function HomePage() {
       <div id="top" className="relative overflow-hidden bg-[#B6B766]">
         <Section className="relative grid items-center gap-12 pt-16 pb-20 lg:grid-cols-[1.1fr_0.9fr] lg:pt-24 lg:pb-28">
           <div className="max-w-xl">
-            <span className="bg-leaf/30 border-olive/40 text-olive-deep inline-flex w-min flex-wrap items-center gap-x-1.5 gap-y-0.5 rounded-full border px-3 py-1 text-xs font-semibold tracking-wide uppercase sm:w-max">
-              <span className="bg-orange-zest h-2 w-2 shrink-0 rounded-full" aria-hidden />
+            <span className="bg-[#69681E] border-[#989A35] text-[#FFFAD7] inline-flex w-min flex-wrap items-center gap-x-1.5 gap-y-0.5 rounded-full border px-3 py-1 text-xs font-semibold tracking-wide uppercase sm:w-max">
+              <span className="bg-[#FFFAD7] h-2 w-2 shrink-0 rounded-full" aria-hidden />
               <span className="whitespace-nowrap">Atelier chocolaté</span>
               <span className="hidden sm:inline" aria-hidden>·</span>
               <span className="whitespace-nowrap">Bio · Éthique · fait main</span>
