@@ -282,7 +282,7 @@ function HomePage() {
               De petits chocolats,
               <br />
               faits avec le{" "}
-              <span className="relative inline-block text-[#FFFAD7]">
+              <span className="relative inline-block text-chocolate">
                 cœur
                 <span
                   className="bg-chocolate absolute -bottom-1 left-0 h-3 w-full -rotate-1 rounded-full"
