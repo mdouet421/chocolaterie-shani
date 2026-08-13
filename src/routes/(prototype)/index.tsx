@@ -215,7 +215,7 @@ function HomePage() {
           </nav>
           <a
             href="#contact"
-            className="bg-forest hover:bg-olive-deep hidden rounded-full px-5 py-2 text-sm font-semibold text-cream transition-colors md:inline-flex"
+            className="bg-[#69681E] hover:bg-[#54541a] hidden rounded-full px-5 py-2 text-sm font-semibold text-cream transition-colors md:inline-flex"
           >
             Me contacter
           </a>
@@ -258,7 +258,7 @@ function HomePage() {
                 <a
                   href="#contact"
                   onClick={() => setMenuOpen(false)}
-                  className="bg-forest hover:bg-olive-deep mt-2 rounded-full px-5 py-2.5 text-center text-sm font-semibold text-cream transition-colors"
+                  className="bg-[#69681E] hover:bg-[#54541a] mt-2 rounded-full px-5 py-2.5 text-center text-sm font-semibold text-cream transition-colors"
                 >
                   Me contacter
                 </a>
@@ -299,7 +299,7 @@ function HomePage() {
             <div className="mt-8 flex flex-wrap items-center gap-3">
               <a
                 href="#creations"
-                className="bg-forest hover:bg-olive-deep rounded-full px-7 py-3 font-semibold text-cream transition-colors"
+                className="bg-[#69681E] hover:bg-[#54541a] rounded-full px-7 py-3 font-semibold text-cream transition-colors"
               >
                 Découvrir les créations
               </a>
@@ -500,7 +500,7 @@ function HomePage() {
               type="button"
               onClick={() => setFormOpen((v) => !v)}
               aria-expanded={formOpen}
-              className="bg-forest text-cream hover:bg-olive-deep rounded-full px-8 py-3 font-semibold transition-colors"
+              className="bg-[#69681E] text-cream hover:bg-[#54541a] rounded-full px-8 py-3 font-semibold transition-colors"
             >
               Écrire à Shani
             </button>
@@ -604,7 +604,7 @@ function HomePage() {
               </div>
               <button
                 type="submit"
-                className="bg-forest text-cream hover:bg-olive-deep w-full rounded-full px-8 py-3 font-semibold transition-colors"
+                className="bg-[#69681E] text-cream hover:bg-[#54541a] w-full rounded-full px-8 py-3 font-semibold transition-colors"
               >
                 Envoyer le message
               </button>
