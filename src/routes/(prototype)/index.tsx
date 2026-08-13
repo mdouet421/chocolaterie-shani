@@ -69,7 +69,7 @@ const SOURCING = [
     from: "Au marché",
     body: "Cueillies chez un maraîcher local au coeur du Cotentin, confites patiemment avant leur bain de chocolat.",
     card: "bg-sage/40 text-cocoa-deep",
-    dot: "bg-strawberry",
+    dot: "bg-[#FFFAD7]",
     fromColor: "text-strawberry",
     bodyColor: "text-cocoa/80",
   },
