@@ -338,7 +338,7 @@ function HomePage() {
                 alt="Le portrait illustré de Shani, cheveux verts et béret de chef"
                 className="relative h-full w-full object-contain"
               />
-              <span className="bg-[#FFFAD7] text-cocoa-deep animate-gentle-float absolute top-[8%] right-[8%] flex h-16 w-16 rotate-6 items-center justify-center rounded-full text-center text-xs font-bold leading-tight shadow-lg">
+              <span className="bg-[#B6B766] text-cocoa-deep animate-gentle-float absolute top-[8%] right-[8%] flex h-16 w-16 rotate-6 items-center justify-center rounded-full text-center text-xs font-bold leading-tight shadow-lg">
                 100%
                 <br />
                 maison
