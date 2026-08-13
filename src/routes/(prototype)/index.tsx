@@ -378,7 +378,7 @@ function HomePage() {
       </div>
 
       {/* Creations */}
-      <div className="bg-sage/40">
+      <div className="bg-[#FFFAD7]">
         <Section id="creations" className="py-20 lg:py-28">
           <div className="max-w-2xl">
             <p className="bg-orange-zest/20 text-orange-zest inline-block rounded-full px-3 py-1 text-sm font-semibold tracking-widest uppercase">
