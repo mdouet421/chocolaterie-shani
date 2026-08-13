@@ -475,11 +475,18 @@ function HomePage() {
       {/* Contact */}
       <div id="contact" className="bg-[#FFFAD7] text-cocoa-deep relative overflow-hidden">
         <Section className="relative py-20 text-center lg:py-28">
-          <img
-            src="/logo-shani-transparent.png"
-            alt="Les Pépites de Shani"
-            className="mx-auto h-44 w-44 object-contain"
-          />
+          <div className="relative mx-auto h-44 w-44">
+            <span
+              aria-hidden
+              className="absolute left-1/2 top-1/2 aspect-square w-[96%] -translate-x-1/2 -translate-y-1/2 rounded-full"
+              style={{ border: "5px solid #B6B766" }}
+            />
+            <img
+              src="/logo-shani-transparent.png"
+              alt="Les Pépites de Shani"
+              className="relative h-full w-full object-contain"
+            />
+          </div>
           <h2 className="font-display text-forest-ink mt-8 text-4xl leading-tight sm:text-5xl">
             J'espère que mes chocolats
             <br className="hidden sm:block" /> vous{" "}
