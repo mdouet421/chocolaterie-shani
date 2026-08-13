@@ -269,7 +269,7 @@ function HomePage() {
       </header>
 
       {/* Hero */}
-      <div id="top" className="relative overflow-hidden bg-[#B6B766]">
+      <div id="top" className="relative overflow-hidden bg-[#FFFAD7]">
         <Section className="relative grid items-center gap-12 pt-16 pb-20 lg:grid-cols-[1.1fr_0.9fr] lg:pt-24 lg:pb-28">
           <div className="max-w-xl">
             <span className="bg-[#69681E] border-[#989A35] text-[#FFFAD7] inline-flex w-min flex-wrap items-center gap-x-1.5 gap-y-0.5 rounded-full border px-3 py-1 text-xs font-semibold tracking-wide uppercase sm:w-max">
@@ -468,7 +468,7 @@ function HomePage() {
       </div>
 
       {/* Contact */}
-      <div id="contact" className="bg-[#B6B766] text-cocoa-deep relative overflow-hidden">
+      <div id="contact" className="bg-[#FFFAD7] text-cocoa-deep relative overflow-hidden">
         <Section className="relative py-20 text-center lg:py-28">
           <img
             src="/logo-shani-transparent.png"
