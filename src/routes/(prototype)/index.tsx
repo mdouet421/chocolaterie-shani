@@ -468,7 +468,7 @@ function HomePage() {
       </div>
 
       {/* Contact */}
-      <div id="contact" className="bg-[#FFFAD7] text-cocoa-deep relative overflow-hidden">
+      <div id="contact" className="bg-[#B6B766] text-cocoa-deep relative overflow-hidden">
         <Section className="relative py-20 text-center lg:py-28">
           <img
             src="/logo-shani-transparent.png"
