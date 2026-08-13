@@ -285,7 +285,7 @@ function HomePage() {
               <span className="relative inline-block text-[#FFFAD7]">
                 cœur
                 <span
-                  className="bg-honey/60 absolute -bottom-1 left-0 h-3 w-full -rotate-1 rounded-full"
+                  className="bg-chocolate absolute -bottom-1 left-0 h-3 w-full -rotate-1 rounded-full"
                   aria-hidden
                 />
               </span>
