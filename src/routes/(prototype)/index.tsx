@@ -59,7 +59,7 @@ const SOURCING = [
     title: "Amandes & noisettes",
     from: "La Fourche",
     body: "Choisies avec soin auprès de filières bio. La sélection s'affine au fil des rencontres.",
-    card: "bg-honey/30 text-cocoa-deep",
+    card: "bg-[#FFFAD7] text-cocoa-deep",
     dot: "bg-orange-zest",
     fromColor: "text-orange-zest",
     bodyColor: "text-cocoa/80",
@@ -433,7 +433,7 @@ function HomePage() {
       <Section id="sourcing" className="py-20 lg:py-28">
         <div className="grid gap-12 lg:grid-cols-[1fr_1fr] lg:items-center">
           <div>
-            <p className="bg-honey/40 text-cocoa-deep inline-block rounded-full px-3 py-1 text-sm font-semibold tracking-widest uppercase">
+            <p className="bg-[#FFFAD7] text-cocoa-deep inline-block rounded-full px-3 py-1 text-sm font-semibold tracking-widest uppercase">
               Le sourcing
             </p>
             <h2 className="font-display text-forest mt-4 text-4xl leading-tight sm:text-5xl">
