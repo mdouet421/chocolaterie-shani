@@ -348,7 +348,7 @@ function HomePage() {
             </p>
             <h2 className="font-display text-forest-ink mt-4 text-4xl leading-tight sm:text-5xl">
               Je m'appelle Shani, et j'aime faire{" "}
-              <span className="text-strawberry">plaisir</span>.
+              <span className="text-chocolate">plaisir</span>.
             </h2>
           </div>
           <div className="text-cocoa/85 space-y-5 text-lg leading-relaxed">
@@ -386,7 +386,7 @@ function HomePage() {
             </p>
             <h2 className="font-display text-forest-ink mt-4 text-4xl leading-tight sm:text-5xl">
               J'ouvre avec{" "}
-              <span className="text-orange-zest">trois recettes</span>.
+              <span className="text-chocolate">trois recettes</span>.
             </h2>
             <p className="text-cocoa/75 mt-4 text-lg">
               Juste trois, mais réfléchies et préparées avec amour et passion.
@@ -438,7 +438,7 @@ function HomePage() {
             </p>
             <h2 className="font-display text-forest-ink mt-4 text-4xl leading-tight sm:text-5xl">
               Des produits bio, choisis avec le{" "}
-              <span className="text-strawberry">cœur</span>.
+              <span className="text-chocolate">cœur</span>.
             </h2>
             <p className="text-cocoa/80 mt-5 text-lg leading-relaxed">
               Je crois qu'un bon chocolat commence par de bons ingrédients, et
@@ -478,7 +478,7 @@ function HomePage() {
           <h2 className="font-display text-forest-ink mt-8 text-4xl leading-tight sm:text-5xl">
             J'espère que mes chocolats
             <br className="hidden sm:block" /> vous{" "}
-            <span className="text-strawberry">plairont</span>.
+            <span className="text-chocolate">plairont</span>.
           </h2>
           <p className="text-cocoa/80 mx-auto mt-5 max-w-xl text-lg leading-relaxed">
             Une envie, une question, une commande pour une occasion ? Je suis
@@ -612,7 +612,7 @@ function HomePage() {
             )}
           </div>
 
-          <p className="font-display text-strawberry mt-12 text-2xl italic">
+          <p className="font-display text-chocolate mt-12 text-2xl italic">
             Amicalement, Shani.
           </p>
         </Section>
