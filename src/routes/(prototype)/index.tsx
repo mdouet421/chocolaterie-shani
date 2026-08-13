@@ -313,7 +313,7 @@ function HomePage() {
                 href={INSTAGRAM_URL}
                 target="_blank"
                 rel="noreferrer"
-                className="text-cocoa/70 hover:text-strawberry inline-flex items-center gap-2 font-semibold transition-colors"
+                className="text-cocoa/70 hover:text-[#FFFAD7] inline-flex items-center gap-2 font-semibold transition-colors"
               >
                 <InstagramIcon className="h-5 w-5" />
                 Suivre sur Instagram
@@ -489,7 +489,7 @@ function HomePage() {
               href={INSTAGRAM_URL}
               target="_blank"
               rel="noreferrer"
-              className="text-cocoa/70 hover:text-strawberry inline-flex items-center gap-2 font-semibold transition-colors"
+              className="text-cocoa/70 hover:text-[#FFFAD7] inline-flex items-center gap-2 font-semibold transition-colors"
             >
               <InstagramIcon className="h-5 w-5" />
               Me suivre sur Instagram
