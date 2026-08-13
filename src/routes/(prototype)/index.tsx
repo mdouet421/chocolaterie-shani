@@ -269,7 +269,7 @@ function HomePage() {
       </header>
 
       {/* Hero */}
-      <div id="top" className="relative overflow-hidden bg-[#B6B766]">
+      <div id="top" className="relative overflow-hidden bg-[#FFFAD7]">
         <Section className="relative grid items-center gap-12 pt-16 pb-20 lg:grid-cols-[1.1fr_0.9fr] lg:pt-24 lg:pb-28">
           <div className="max-w-xl">
             <span className="bg-[#69681E] border-[#989A35] text-[#FFFAD7] inline-flex w-min flex-wrap items-center gap-x-1.5 gap-y-0.5 rounded-full border px-3 py-1 text-xs font-semibold tracking-wide uppercase sm:w-max">
@@ -313,7 +313,7 @@ function HomePage() {
                 href={INSTAGRAM_URL}
                 target="_blank"
                 rel="noreferrer"
-                className="text-cocoa/70 hover:text-[#FFFAD7] inline-flex items-center gap-2 font-semibold transition-colors"
+                className="text-cocoa/70 hover:text-chocolate inline-flex items-center gap-2 font-semibold transition-colors"
               >
                 <InstagramIcon className="h-5 w-5" />
                 Suivre sur Instagram
@@ -323,12 +323,17 @@ function HomePage() {
 
           <div className="relative mx-auto w-full max-w-md order-first lg:order-none">
             <div className="relative aspect-square w-full">
+              <span
+                aria-hidden
+                className="absolute left-1/2 top-1/2 aspect-square w-[96%] -translate-x-1/2 -translate-y-1/2 rounded-full"
+                style={{ border: "5px solid #B6B766" }}
+              />
               <img
                 src="/logo-shani-transparent.png"
                 alt="Le portrait illustré de Shani, cheveux verts et béret de chef"
-                className="h-full w-full object-contain"
+                className="relative h-full w-full object-contain"
               />
-              <span className="bg-[#FFFAD7] text-cocoa-deep animate-gentle-float absolute top-[8%] right-[8%] flex h-16 w-16 rotate-6 items-center justify-center rounded-full text-center text-xs font-bold leading-tight shadow-lg">
+              <span className="bg-[#B6B766] text-cocoa-deep animate-gentle-float absolute top-[8%] right-[8%] flex h-16 w-16 rotate-6 items-center justify-center rounded-full text-center text-xs font-bold leading-tight shadow-lg">
                 100%
                 <br />
                 maison
@@ -468,13 +473,20 @@ function HomePage() {
       </div>
 
       {/* Contact */}
-      <div id="contact" className="bg-[#B6B766] text-cocoa-deep relative overflow-hidden">
+      <div id="contact" className="bg-[#FFFAD7] text-cocoa-deep relative overflow-hidden">
         <Section className="relative py-20 text-center lg:py-28">
-          <img
-            src="/logo-shani-transparent.png"
-            alt="Les Pépites de Shani"
-            className="mx-auto h-44 w-44 object-contain"
-          />
+          <div className="relative mx-auto h-44 w-44">
+            <span
+              aria-hidden
+              className="absolute left-1/2 top-1/2 aspect-square w-[96%] -translate-x-1/2 -translate-y-1/2 rounded-full"
+              style={{ border: "5px solid #B6B766" }}
+            />
+            <img
+              src="/logo-shani-transparent.png"
+              alt="Les Pépites de Shani"
+              className="relative h-full w-full object-contain"
+            />
+          </div>
           <h2 className="font-display text-forest-ink mt-8 text-4xl leading-tight sm:text-5xl">
             J'espère que mes chocolats
             <br className="hidden sm:block" /> vous{" "}
@@ -489,7 +501,7 @@ function HomePage() {
               href={INSTAGRAM_URL}
               target="_blank"
               rel="noreferrer"
-              className="text-cocoa/70 hover:text-[#FFFAD7] inline-flex items-center gap-2 font-semibold transition-colors"
+              className="text-cocoa/70 hover:text-chocolate inline-flex items-center gap-2 font-semibold transition-colors"
             >
               <InstagramIcon className="h-5 w-5" />
               Me suivre sur Instagram
