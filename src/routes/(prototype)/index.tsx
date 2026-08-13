@@ -516,7 +516,7 @@ function HomePage() {
             className={`overflow-hidden transition-all duration-500 ease-out ${formOpen ? "max-h-[40rem] opacity-100" : "max-h-0 opacity-0"}`}
           >
             {sent ? (
-              <div className="border-cocoa/10 mx-auto mt-8 max-w-xl rounded-3xl border bg-[#FFFAD7] p-8 text-center shadow-[0_30px_60px_-30px_rgba(60,40,20,0.35)]">
+              <div className="border-cocoa/10 mx-auto mt-8 max-w-xl rounded-3xl border bg-white p-8 text-center shadow-[0_30px_60px_-30px_rgba(60,40,20,0.35)]">
                 <p className="font-display text-forest-ink text-2xl">
                   Merci, votre message est bien noté !
                 </p>
@@ -528,7 +528,7 @@ function HomePage() {
             <form
               noValidate
               onSubmit={handleSend}
-              className="border-cocoa/10 mx-auto mt-8 max-w-xl space-y-4 rounded-3xl border bg-[#FFFAD7] p-6 text-left shadow-[0_30px_60px_-30px_rgba(60,40,20,0.35)] sm:p-8"
+              className="border-cocoa/10 mx-auto mt-8 max-w-xl space-y-4 rounded-3xl border bg-white p-6 text-left shadow-[0_30px_60px_-30px_rgba(60,40,20,0.35)] sm:p-8"
             >
               <div>
                 <label
