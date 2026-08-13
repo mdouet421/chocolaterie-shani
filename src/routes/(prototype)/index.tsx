@@ -363,7 +363,7 @@ function HomePage() {
               l'auto-entrepreneuriat, gérer les achats, les ventes… tout ce
               nouveau monde, doucement mais sûrement.
             </p>
-            <blockquote className="bg-chocolate text-[#FFFAD7] my-8 rounded-3xl px-7 py-6 font-display text-2xl leading-snug italic">
+            <blockquote className="bg-chocolate text-white my-8 rounded-3xl px-7 py-6 font-display text-2xl leading-snug italic">
               « Je préfère le bouche à oreille aux grandes stratégies commerciales :
               commencer sans pression, et garder ce côté passion. »
             </blockquote>
