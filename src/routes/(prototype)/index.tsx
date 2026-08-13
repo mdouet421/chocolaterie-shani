@@ -330,8 +330,8 @@ function HomePage() {
             <div className="relative aspect-square w-full">
               <span
                 aria-hidden
-                className="absolute left-1/2 top-1/2 z-10 aspect-square w-[78%] -translate-x-1/2 -translate-y-1/2 rounded-full"
-                style={{ border: "2px solid #B6B766" }}
+                className="absolute left-1/2 top-1/2 aspect-square w-[96%] -translate-x-1/2 -translate-y-1/2 rounded-full"
+                style={{ border: "3px solid #B6B766" }}
               />
               <img
                 src="/logo-shani-transparent.png"
