@@ -330,7 +330,7 @@ function HomePage() {
             <div className="relative aspect-square w-full">
               <span
                 aria-hidden
-                className="absolute left-1/2 top-1/2 aspect-square w-[82%] -translate-x-1/2 -translate-y-1/2 rounded-full"
+                className="absolute left-1/2 top-1/2 aspect-square w-[70%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#B6B766]/25"
                 style={{ border: "2px solid #B6B766" }}
               />
               <img
