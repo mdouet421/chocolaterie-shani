@@ -51,8 +51,8 @@ const SOURCING = [
     from: "Kaoka",
     body: "Un cacao cultivé dans le respect de l'environnement et des producteurs, tracé jusqu'à la fève.",
     card: "bg-chocolate text-cream",
-    dot: "bg-honey",
-    fromColor: "text-honey",
+    dot: "bg-[#FFFAD7]",
+    fromColor: "text-[#FFFAD7]",
     bodyColor: "text-cream/80",
   },
   {
@@ -60,8 +60,8 @@ const SOURCING = [
     from: "La Fourche",
     body: "Choisies avec soin auprès de filières bio. La sélection s'affine au fil des rencontres.",
     card: "bg-[#B6B766] text-cocoa-deep",
-    dot: "bg-orange-zest",
-    fromColor: "text-orange-zest",
+    dot: "bg-chocolate",
+    fromColor: "text-chocolate",
     bodyColor: "text-cocoa/80",
   },
   {
