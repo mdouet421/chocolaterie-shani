@@ -343,7 +343,7 @@ function HomePage() {
       <Section id="histoire" className="relative py-20 lg:py-28">
         <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
           <div>
-            <p className="bg-leaf/25 text-forest-ink inline-block rounded-full px-3 py-1 text-sm font-semibold tracking-widest uppercase">
+            <p className="bg-[#E5E5C8] text-forest-ink inline-block rounded-full px-3 py-1 text-sm font-semibold tracking-widest uppercase">
               L'histoire
             </p>
             <h2 className="font-display text-forest-ink mt-4 text-4xl leading-tight sm:text-5xl">
@@ -433,7 +433,7 @@ function HomePage() {
       <Section id="sourcing" className="py-20 lg:py-28">
         <div className="grid gap-12 lg:grid-cols-[1fr_1fr] lg:items-center">
           <div>
-            <p className="bg-leaf/25 text-forest-ink inline-block rounded-full px-3 py-1 text-sm font-semibold tracking-widest uppercase">
+            <p className="bg-[#E5E5C8] text-forest-ink inline-block rounded-full px-3 py-1 text-sm font-semibold tracking-widest uppercase">
               Le sourcing
             </p>
             <h2 className="font-display text-forest-ink mt-4 text-4xl leading-tight sm:text-5xl">
