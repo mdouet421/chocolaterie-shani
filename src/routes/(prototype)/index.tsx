@@ -15,9 +15,9 @@ const NAV = [
 const CREATIONS = [
   {
     name: "Amandettes",
-    border: "border-strawberry",
-    chip: "bg-strawberry text-cream",
-    title: "text-strawberry",
+    border: "border-[#B6B766]",
+    chip: "bg-[#B6B766] text-cream",
+    title: "text-[#B6B766]",
     img: "https://images.unsplash.com/photo-1508061253366-f7da158b6d46?auto=format&fit=crop&w=1000&q=80",
     alt: "Amandes torréfiées enrobées de chocolat noir",
     desc: "Des amandes torréfiées, trempées une à une dans un chocolat tempéré, avec une touche de fleur de sel.",
@@ -27,7 +27,7 @@ const CREATIONS = [
     name: "Orangettes",
     border: "border-forest",
     chip: "bg-forest text-cream",
-    title: "text-forest",
+    title: "text-forest-ink",
     img: "https://images.unsplash.com/photo-1547514701-42782101795e?auto=format&fit=crop&w=1000&q=80",
     alt: "Lamelles d'orange confite trempées dans du chocolat noir",
     desc: "Des écorces d'orange confites, plongées dans un chocolat noir tempéré, franches et parfumées.",
@@ -51,26 +51,26 @@ const SOURCING = [
     from: "Kaoka",
     body: "Un cacao cultivé dans le respect de l'environnement et des producteurs, tracé jusqu'à la fève.",
     card: "bg-chocolate text-cream",
-    dot: "bg-honey",
-    fromColor: "text-honey",
+    dot: "bg-[#FFFAD7]",
+    fromColor: "text-[#FFFAD7]",
     bodyColor: "text-cream/80",
   },
   {
     title: "Amandes & noisettes",
     from: "La Fourche",
     body: "Choisies avec soin auprès de filières bio. La sélection s'affine au fil des rencontres.",
-    card: "bg-honey/30 text-cocoa-deep",
-    dot: "bg-orange-zest",
-    fromColor: "text-orange-zest",
+    card: "bg-[#B6B766] text-cocoa-deep",
+    dot: "bg-chocolate",
+    fromColor: "text-chocolate",
     bodyColor: "text-cocoa/80",
   },
   {
     title: "Les oranges bio",
     from: "Au marché",
     body: "Cueillies chez un maraîcher local au coeur du Cotentin, confites patiemment avant leur bain de chocolat.",
-    card: "bg-sage/40 text-cocoa-deep",
-    dot: "bg-strawberry",
-    fromColor: "text-strawberry",
+    card: "bg-[#FFFAD7] text-cocoa-deep",
+    dot: "bg-chocolate",
+    fromColor: "text-chocolate",
     bodyColor: "text-cocoa/80",
   },
 ];
@@ -198,7 +198,7 @@ function HomePage() {
               alt="Les Pépites de Shani, atelier chocolaté"
               className="border-cocoa/10 h-11 w-11 rounded-full border object-cover"
             />
-            <span className="font-display text-forest hidden text-lg leading-none sm:block">
+            <span className="font-display text-forest-ink hidden text-lg leading-none sm:block">
               Les Pépites de Shani
             </span>
           </a>
@@ -207,7 +207,7 @@ function HomePage() {
               <a
                 key={n.href}
                 href={n.href}
-                className="text-cocoa/70 hover:text-forest text-sm font-medium transition-colors"
+                className="text-cocoa/70 hover:text-forest-ink text-sm font-medium transition-colors"
               >
                 {n.label}
               </a>
@@ -215,7 +215,7 @@ function HomePage() {
           </nav>
           <a
             href="#contact"
-            className="bg-forest hover:bg-olive-deep hidden rounded-full px-5 py-2 text-sm font-semibold text-cream transition-colors md:inline-flex"
+            className="bg-[#69681E] hover:bg-[#54541a] hidden rounded-full px-5 py-2 text-sm font-semibold text-cream transition-colors md:inline-flex"
           >
             Me contacter
           </a>
@@ -225,7 +225,7 @@ function HomePage() {
               aria-label="Ouvrir le menu"
               aria-expanded={menuOpen}
               onClick={() => setMenuOpen((v) => !v)}
-              className="border-cocoa/15 text-forest hover:bg-forest/5 relative z-10 inline-flex h-11 w-11 items-center justify-center rounded-full border transition-colors"
+              className="border-cocoa/15 text-forest-ink hover:bg-forest/5 relative z-10 inline-flex h-11 w-11 items-center justify-center rounded-full border transition-colors"
             >
               <span className="relative block h-4 w-5" aria-hidden>
                 <span
@@ -250,7 +250,7 @@ function HomePage() {
                     key={n.href}
                     href={n.href}
                     onClick={() => setMenuOpen(false)}
-                    className="text-cocoa/80 hover:bg-forest/5 hover:text-forest rounded-2xl px-4 py-2.5 text-base font-medium transition-colors"
+                    className="text-cocoa/80 hover:bg-forest/5 hover:text-forest-ink rounded-2xl px-4 py-2.5 text-base font-medium transition-colors"
                   >
                     {n.label}
                   </a>
@@ -258,7 +258,7 @@ function HomePage() {
                 <a
                   href="#contact"
                   onClick={() => setMenuOpen(false)}
-                  className="bg-forest hover:bg-olive-deep mt-2 rounded-full px-5 py-2.5 text-center text-sm font-semibold text-cream transition-colors"
+                  className="bg-[#69681E] hover:bg-[#54541a] mt-2 rounded-full px-5 py-2.5 text-center text-sm font-semibold text-cream transition-colors"
                 >
                   Me contacter
                 </a>
@@ -269,23 +269,23 @@ function HomePage() {
       </header>
 
       {/* Hero */}
-      <div id="top" className="relative overflow-hidden">
+      <div id="top" className="relative overflow-hidden bg-[#E5E5C8]">
         <Section className="relative grid items-center gap-12 pt-16 pb-20 lg:grid-cols-[1.1fr_0.9fr] lg:pt-24 lg:pb-28">
           <div className="max-w-xl">
-            <span className="bg-leaf/30 border-olive/40 text-olive-deep inline-flex w-min flex-wrap items-center gap-x-1.5 gap-y-0.5 rounded-full border px-3 py-1 text-xs font-semibold tracking-wide uppercase sm:w-max">
-              <span className="bg-orange-zest h-2 w-2 shrink-0 rounded-full" aria-hidden />
+            <span className="bg-[#69681E] border-[#989A35] text-[#FFFAD7] inline-flex w-min flex-wrap items-center gap-x-1.5 gap-y-0.5 rounded-full border px-3 py-1 text-xs font-semibold tracking-wide uppercase sm:w-max">
+              <span className="bg-[#FFFAD7] h-2 w-2 shrink-0 rounded-full" aria-hidden />
               <span className="whitespace-nowrap">Atelier chocolaté</span>
               <span className="hidden sm:inline" aria-hidden>·</span>
               <span className="whitespace-nowrap">Bio · Éthique · fait main</span>
             </span>
-            <h1 className="font-display text-forest mt-6 text-5xl leading-[1.05] sm:text-6xl lg:text-7xl">
+            <h1 className="font-display text-forest-ink mt-6 text-5xl leading-[1.05] sm:text-6xl lg:text-7xl">
               De petits chocolats,
               <br />
               faits avec le{" "}
-              <span className="relative inline-block text-orange-zest">
+              <span className="relative inline-block text-chocolate">
                 cœur
                 <span
-                  className="bg-honey/60 absolute -bottom-1 left-0 h-3 w-full -rotate-1 rounded-full"
+                  className="bg-chocolate absolute -bottom-1 left-0 h-3 w-full -rotate-1 rounded-full"
                   aria-hidden
                 />
               </span>
@@ -299,13 +299,13 @@ function HomePage() {
             <div className="mt-8 flex flex-wrap items-center gap-3">
               <a
                 href="#creations"
-                className="bg-forest hover:bg-olive-deep rounded-full px-7 py-3 font-semibold text-cream transition-colors"
+                className="bg-[#69681E] hover:bg-[#54541a] rounded-full px-7 py-3 font-semibold text-cream transition-colors"
               >
                 Découvrir les créations
               </a>
               <a
                 href="#histoire"
-                className="border-forest text-forest hover:bg-forest/10 rounded-full border px-7 py-3 font-semibold transition-colors"
+                className="border-forest text-forest-ink hover:bg-forest/10 rounded-full border px-7 py-3 font-semibold transition-colors"
               >
                 Rencontrer Shani
               </a>
@@ -313,7 +313,7 @@ function HomePage() {
                 href={INSTAGRAM_URL}
                 target="_blank"
                 rel="noreferrer"
-                className="text-cocoa/70 hover:text-strawberry inline-flex items-center gap-2 font-semibold transition-colors"
+                className="text-cocoa/70 hover:text-chocolate inline-flex items-center gap-2 font-semibold transition-colors"
               >
                 <InstagramIcon className="h-5 w-5" />
                 Suivre sur Instagram
@@ -322,15 +322,13 @@ function HomePage() {
           </div>
 
           <div className="relative mx-auto w-full max-w-md order-first lg:order-none">
-            <div className="bg-leaf/40 absolute inset-0 -rotate-6 rounded-[2.5rem]" aria-hidden />
-            <div className="bg-blush/70 absolute inset-0 rotate-3 rounded-[2.5rem]" aria-hidden />
-            <div className="border-cocoa/10 bg-white relative rounded-[2.5rem] border p-6 shadow-[0_30px_60px_-30px_rgba(60,40,20,0.35)]">
+            <div className="relative aspect-square w-full">
               <img
-                src="/logo-shani.jpeg"
+                src="/logo-shani-transparent.png"
                 alt="Le portrait illustré de Shani, cheveux verts et béret de chef"
-                className="w-full rounded-[2rem] object-cover"
+                className="h-full w-full object-contain"
               />
-              <span className="bg-orange-zest text-cream animate-gentle-float absolute -top-4 -right-4 flex h-16 w-16 rotate-6 items-center justify-center rounded-full text-center text-xs font-bold leading-tight shadow-lg">
+              <span className="bg-[#FFFAD7] text-cocoa-deep animate-gentle-float absolute top-[8%] right-[8%] flex h-16 w-16 rotate-6 items-center justify-center rounded-full text-center text-xs font-bold leading-tight shadow-lg">
                 100%
                 <br />
                 maison
@@ -345,12 +343,12 @@ function HomePage() {
       <Section id="histoire" className="relative py-20 lg:py-28">
         <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
           <div>
-            <p className="bg-leaf/25 text-forest inline-block rounded-full px-3 py-1 text-sm font-semibold tracking-widest uppercase">
+            <p className="bg-[#E5E5C8] text-forest-ink inline-block rounded-full px-3 py-1 text-sm font-semibold tracking-widest uppercase">
               L'histoire
             </p>
-            <h2 className="font-display text-forest mt-4 text-4xl leading-tight sm:text-5xl">
+            <h2 className="font-display text-forest-ink mt-4 text-4xl leading-tight sm:text-5xl">
               Je m'appelle Shani, et j'aime faire{" "}
-              <span className="text-strawberry">plaisir</span>.
+              <span className="text-chocolate">plaisir</span>.
             </h2>
           </div>
           <div className="text-cocoa/85 space-y-5 text-lg leading-relaxed">
@@ -365,7 +363,7 @@ function HomePage() {
               l'auto-entrepreneuriat, gérer les achats, les ventes… tout ce
               nouveau monde, doucement mais sûrement.
             </p>
-            <blockquote className="bg-honey/35 text-forest my-8 rounded-3xl px-7 py-6 font-display text-2xl leading-snug italic">
+            <blockquote className="bg-chocolate text-white my-8 rounded-3xl px-7 py-6 font-display text-2xl leading-snug italic">
               « Je préfère le bouche à oreille aux grandes stratégies commerciales :
               commencer sans pression, et garder ce côté passion. »
             </blockquote>
@@ -380,15 +378,15 @@ function HomePage() {
       </div>
 
       {/* Creations */}
-      <div className="bg-sage/40">
+      <div className="bg-[#FFFAD7]">
         <Section id="creations" className="py-20 lg:py-28">
           <div className="max-w-2xl">
-            <p className="bg-orange-zest/20 text-orange-zest inline-block rounded-full px-3 py-1 text-sm font-semibold tracking-widest uppercase">
+            <p className="bg-[#B6B766]/25 text-[#69681E] inline-block rounded-full px-3 py-1 text-sm font-semibold tracking-widest uppercase">
               Les créations
             </p>
-            <h2 className="font-display text-forest mt-4 text-4xl leading-tight sm:text-5xl">
+            <h2 className="font-display text-forest-ink mt-4 text-4xl leading-tight sm:text-5xl">
               J'ouvre avec{" "}
-              <span className="text-orange-zest">trois recettes</span>.
+              <span className="text-chocolate">trois recettes</span>.
             </h2>
             <p className="text-cocoa/75 mt-4 text-lg">
               Juste trois, mais réfléchies et préparées avec amour et passion.
@@ -435,12 +433,12 @@ function HomePage() {
       <Section id="sourcing" className="py-20 lg:py-28">
         <div className="grid gap-12 lg:grid-cols-[1fr_1fr] lg:items-center">
           <div>
-            <p className="bg-honey/40 text-cocoa-deep inline-block rounded-full px-3 py-1 text-sm font-semibold tracking-widest uppercase">
+            <p className="bg-[#E5E5C8] text-forest-ink inline-block rounded-full px-3 py-1 text-sm font-semibold tracking-widest uppercase">
               Le sourcing
             </p>
-            <h2 className="font-display text-forest mt-4 text-4xl leading-tight sm:text-5xl">
+            <h2 className="font-display text-forest-ink mt-4 text-4xl leading-tight sm:text-5xl">
               Des produits bio, choisis avec le{" "}
-              <span className="text-strawberry">cœur</span>.
+              <span className="text-chocolate">cœur</span>.
             </h2>
             <p className="text-cocoa/80 mt-5 text-lg leading-relaxed">
               Je crois qu'un bon chocolat commence par de bons ingrédients, et
@@ -470,17 +468,17 @@ function HomePage() {
       </div>
 
       {/* Contact */}
-      <div id="contact" className="bg-blush/40 text-cocoa-deep relative overflow-hidden">
+      <div id="contact" className="bg-[#E5E5C8] text-cocoa-deep relative overflow-hidden">
         <Section className="relative py-20 text-center lg:py-28">
           <img
-            src="/logo-shani.jpeg"
+            src="/logo-shani-transparent.png"
             alt="Les Pépites de Shani"
-            className="mx-auto h-40 w-40 rounded-full object-cover ring-[14px] ring-white"
+            className="mx-auto h-44 w-44 object-contain"
           />
-          <h2 className="font-display text-forest mt-8 text-4xl leading-tight sm:text-5xl">
+          <h2 className="font-display text-forest-ink mt-8 text-4xl leading-tight sm:text-5xl">
             J'espère que mes chocolats
             <br className="hidden sm:block" /> vous{" "}
-            <span className="text-strawberry">plairont</span>.
+            <span className="text-chocolate">plairont</span>.
           </h2>
           <p className="text-cocoa/80 mx-auto mt-5 max-w-xl text-lg leading-relaxed">
             Une envie, une question, une commande pour une occasion ? Je suis
@@ -491,7 +489,7 @@ function HomePage() {
               href={INSTAGRAM_URL}
               target="_blank"
               rel="noreferrer"
-              className="text-cocoa/70 hover:text-strawberry inline-flex items-center gap-2 font-semibold transition-colors"
+              className="text-cocoa/70 hover:text-chocolate inline-flex items-center gap-2 font-semibold transition-colors"
             >
               <InstagramIcon className="h-5 w-5" />
               Me suivre sur Instagram
@@ -502,13 +500,13 @@ function HomePage() {
               type="button"
               onClick={() => setFormOpen((v) => !v)}
               aria-expanded={formOpen}
-              className="bg-forest text-cream hover:bg-olive-deep rounded-full px-8 py-3 font-semibold transition-colors"
+              className="bg-[#69681E] text-cream hover:bg-[#54541a] rounded-full px-8 py-3 font-semibold transition-colors"
             >
               Écrire à Shani
             </button>
             <a
               href="#creations"
-              className="border-forest text-forest hover:bg-forest/10 rounded-full border px-8 py-3 font-semibold transition-colors"
+              className="border-forest text-forest-ink hover:bg-forest/10 rounded-full border px-8 py-3 font-semibold transition-colors"
             >
               Revoir les recettes
             </a>
@@ -519,7 +517,7 @@ function HomePage() {
           >
             {sent ? (
               <div className="border-cocoa/10 mx-auto mt-8 max-w-xl rounded-3xl border bg-white p-8 text-center shadow-[0_30px_60px_-30px_rgba(60,40,20,0.35)]">
-                <p className="font-display text-forest text-2xl">
+                <p className="font-display text-forest-ink text-2xl">
                   Merci, votre message est bien noté !
                 </p>
                 <p className="text-cocoa/70 mt-3">
@@ -606,7 +604,7 @@ function HomePage() {
               </div>
               <button
                 type="submit"
-                className="bg-forest text-cream hover:bg-olive-deep w-full rounded-full px-8 py-3 font-semibold transition-colors"
+                className="bg-[#69681E] text-cream hover:bg-[#54541a] w-full rounded-full px-8 py-3 font-semibold transition-colors"
               >
                 Envoyer le message
               </button>
@@ -614,7 +612,7 @@ function HomePage() {
             )}
           </div>
 
-          <p className="font-display text-strawberry mt-12 text-2xl italic">
+          <p className="font-display text-chocolate mt-12 text-2xl italic">
             Amicalement, Shani.
           </p>
         </Section>
@@ -623,7 +621,7 @@ function HomePage() {
       {/* Footer */}
       <footer className="border-cocoa/10 bg-white border-t">
         <div className="text-cocoa/60 mx-auto flex w-full max-w-6xl flex-col items-center justify-between gap-3 px-6 py-8 text-sm sm:flex-row sm:px-8">
-          <span className="font-display text-forest text-base">
+          <span className="font-display text-forest-ink text-base">
             Les Pépites de Shani — Atelier chocolaté
           </span>
           <span>Bio · Éthique · Fait main avec amour</span>
